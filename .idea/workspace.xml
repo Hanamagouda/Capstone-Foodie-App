@@ -5,46 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/APIGateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APIGateway/src/test/java/com/niit/ApiGatewayApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/CustomerServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Cuisine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/test/java/com/niit/CustomerServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/src/main/java/com/niit/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/src/test/java/com/niit/EurekaServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/UserAuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/UserAuthenticationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680158323859</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations.">
+      <created>1680162408678</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680162408678</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,7 +185,8 @@
     <MESSAGE value="edit login user logic inside the service class." />
     <MESSAGE value="Created security token generator JwtSecurityTokenGenerator interface and JwtSecurityTokenGeneratorImpl class." />
     <MESSAGE value="Written UserController and application.properties inside the UserAuthentication application." />
-    <option name="LAST_COMMIT_MESSAGE" value="Written UserController and application.properties inside the UserAuthentication application." />
+    <MESSAGE value="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

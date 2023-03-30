@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
             throw new UserNotFoundException();
         } else {
             User loginUser = userRepository.findById(user.getUserEmailId()).get();
-            if (loginUser.getUserPassword().equals(user.getUserPassword())) {
+            if (loginUser.getPassword().equals(user.getPassword())) {
                 return loginUser;
             }
         }

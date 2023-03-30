@@ -20,7 +20,7 @@ public class JwtSecurityTokenGeneratorImpl implements JwtSecurityTokenGenerator 
     @Override
     public Map<String, String> tokenGenerator(User user) {
         Map<String, String> tokenMap = new HashMap<>();
-        user.setUserPassword("");
+        user.setPassword("");
         Map<String, Object> userData = new HashMap<>();
         userData.put("Id", user.getUserEmailId());
         String jwtTokenString = Jwts.builder().setClaims(userData).setIssuedAt(new Date()).signWith(SignatureAlgorithm.HS512, "mySecret").compact();
