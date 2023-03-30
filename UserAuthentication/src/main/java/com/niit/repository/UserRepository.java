@@ -12,4 +12,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, String> {
+    // @Repository used to access the information in DataBase
 }

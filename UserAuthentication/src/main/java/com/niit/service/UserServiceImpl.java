@@ -23,6 +23,13 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
+    /**
+     * This method is to add user.
+     *
+     * @param user - It will take user details as argument.
+     * @return - It return user type.
+     * @throws UserAlreadyExistsException - If any chance user already exists then it will throw exception.
+     */
     @Override
     public User addUser(User user) throws UserAlreadyExistsException {
         if (userRepository.findById(user.getUserEmailId()).isPresent()) {
@@ -32,6 +39,13 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * This method is to login from User details.
+     *
+     * @param user - It will take user details as argument.
+     * @return - It return user type.
+     * @throws UserNotFoundException - If any chance user not found then it will throw exception.
+     */
     @Override
     public User loginUser(User user) throws UserNotFoundException {
         if (userRepository.findById(user.getUserEmailId()).isEmpty()) {

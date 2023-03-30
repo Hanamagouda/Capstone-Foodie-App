@@ -22,7 +22,7 @@ public interface UserService {
     public User addUser(User user) throws UserAlreadyExistsException;
 
     /**
-     * This method is to loginUser.
+     * This method is to log in from  details.
      *
      * @param user - It will take user details as argument.
      * @return - It return user type.

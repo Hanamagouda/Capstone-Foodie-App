@@ -33,6 +33,13 @@ public class UserController {
         this.userService = userService;
     }
 
+    /**
+     * This method is register the user.
+     *
+     * @param user
+     * @return User Details
+     */
+
     @PostMapping("/register")
     public ResponseEntity<?> addUser(@RequestBody User user) {
         try {
@@ -46,6 +53,13 @@ public class UserController {
             return new ResponseEntity<String>("Error Occurred while trying to register new user", HttpStatus.BAD_REQUEST);
         }
     }
+
+    /**
+     * This method is to Login from user details
+     *
+     * @param user
+     * @return Login details
+     */
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody User user) {

@@ -18,6 +18,8 @@ import javax.persistence.Id;
 @Setter
 @ToString
 public class User {
+
+    //Instance variables of User
     @Id
     private String userEmailId;
     private String password;
