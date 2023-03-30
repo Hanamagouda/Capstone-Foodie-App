@@ -10,11 +10,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(code = HttpStatus.ALREADY_REPORTED, reason = "Trying to add duplicate user")
-public class UserAlreadyExists extends Exception {
-    public UserAlreadyExists() {
+public class UserAlreadyExistsException extends Exception {
+    public UserAlreadyExistsException() {
     }
 
-    public UserAlreadyExists(String message) {
+    public UserAlreadyExistsException(String message) {
         super(message);
     }
 }

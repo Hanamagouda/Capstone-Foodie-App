@@ -7,7 +7,7 @@
 package com.niit.service;
 
 import com.niit.domain.User;
-import com.niit.exception.UserAlreadyExists;
+import com.niit.exception.UserAlreadyExistsException;
 import com.niit.exception.UserNotFoundException;
 
 public interface UserService {
@@ -17,9 +17,9 @@ public interface UserService {
      *
      * @param user - It will take user details as argument.
      * @return - It return user type.
-     * @throws UserAlreadyExists - If any chance user already exists then it will throw exception.
+     * @throws UserAlreadyExistsException - If any chance user already exists then it will throw exception.
      */
-    public User addUser(User user) throws UserAlreadyExists;
+    public User addUser(User user) throws UserAlreadyExistsException;
 
     /**
      * This method is to loginUser.
