@@ -18,11 +18,14 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring-cloud.version>2021.0.5</spring-cloud.version>
+    <spring-cloud.version>2021.0.6</spring-cloud.version>
   </properties>
 
   <modules>
     <module>UserAuthentication</module>
+    <module>APIGateway</module>
+    <module>EurekaServer</module>
+    <module>CustomerService</module>
   </modules>
 
   <dependencies>

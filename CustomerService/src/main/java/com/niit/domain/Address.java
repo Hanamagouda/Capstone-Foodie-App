@@ -8,18 +8,14 @@ package com.niit.domain;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class User {
-    @Id
-    private String userEmailId;
-    private String password;
-    private String typeOfUser;
+public class Address {
+    private String houseNumber;
+    private String street;
+    private String city;
+    private int pinCode;
 }

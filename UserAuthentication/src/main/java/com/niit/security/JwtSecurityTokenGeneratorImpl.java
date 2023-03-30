@@ -9,11 +9,13 @@ package com.niit.security;
 import com.niit.domain.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class JwtSecurityTokenGeneratorImpl implements JwtSecurityTokenGenerator {
     @Override
     public Map<String, String> tokenGenerator(User user) {
