@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/UserAuthenticationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/exception/UserAlreadyExists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/test/java/com/niit/UserAuthenticationApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/exception/UserAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/exception/UserAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,9 +62,22 @@
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
     </task>
+    <task id="LOCAL-00001" summary="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class">
+      <created>1680154876704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680154876704</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
