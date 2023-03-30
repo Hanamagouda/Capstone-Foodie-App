@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -81,7 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680155119771</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Written add user and login user inside the service class.">
+      <created>1680155386990</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680155386990</updated>
+    </task>
+    <task id="LOCAL-00005" summary="edit login user logic inside the service class.">
+      <created>1680155643119</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680155643119</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -89,7 +106,9 @@
     <MESSAGE value="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class" />
     <MESSAGE value="Renamed exception class" />
     <MESSAGE value="Injected the user reposiotry inside the service class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Injected the user reposiotry inside the service class." />
+    <MESSAGE value="Written add user and login user inside the service class." />
+    <MESSAGE value="edit login user logic inside the service class." />
+    <option name="LAST_COMMIT_MESSAGE" value="edit login user logic inside the service class." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
