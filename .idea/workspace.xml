@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/exception/UserAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/exception/UserAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +67,29 @@
       <option name="project" value="LOCAL" />
       <updated>1680154876704</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Renamed exception class">
+      <created>1680154985569</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680154985569</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Injected the user reposiotry inside the service class.">
+      <created>1680155119771</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680155119771</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class" />
+    <MESSAGE value="Renamed exception class" />
+    <MESSAGE value="Injected the user reposiotry inside the service class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Injected the user reposiotry inside the service class." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

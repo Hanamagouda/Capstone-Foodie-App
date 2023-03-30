@@ -36,7 +36,12 @@ public class UserServiceImpl implements UserService {
     public User loginUser(User user) throws UserNotFoundException {
         if (userRepository.findById(user.getUserEmailId()).isEmpty()) {
             throw new UserNotFoundException();
+        } else {
+            User loginUser = userRepository.findById(user.getUserEmailId()).get();
+            if (loginUser.getUserPassword().equals(user.getUserPassword())) {
+                return loginUser;
+            }
         }
-        return userRepository.findById(user.getUserEmailId()).get();
+        return null;
     }
 }
