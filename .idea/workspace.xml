@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/repository/CustomerRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,10 +186,25 @@
       <option name="project" value="LOCAL" />
       <updated>1680166649510</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created exception class inside the CustomerService.">
+      <created>1680235089961</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680235089962</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created two more exception class inside the CustomerService.">
+      <created>1680235306366</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680235306366</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.First we created quickstart maven project.&#10;2.Then we created UserAuthentication spring boot application and inside the application we created domain,exception,repository,and service class" />
     <MESSAGE value="Renamed exception class" />
@@ -202,8 +216,9 @@
     <MESSAGE value="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations." />
     <MESSAGE value="Some Changes happened inside the userAuthentication" />
     <MESSAGE value="Add Doc Comment inside UserAuthentication Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Doc Comment inside UserAuthentication Application" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Created exception class inside the CustomerService." />
+    <MESSAGE value="Created two more exception class inside the CustomerService." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created two more exception class inside the CustomerService." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
