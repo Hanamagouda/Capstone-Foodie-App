@@ -6,7 +6,7 @@
 
 package com.niit.service;
 
-import com.niit.domain.User;
+import com.niit.domain.Customer;
 import com.niit.exception.UserAlreadyExistsException;
 import com.niit.exception.UserNotFoundException;
 import com.niit.repository.UserRepository;
@@ -26,34 +26,34 @@ public class UserServiceImpl implements UserService {
     /**
      * This method is to add user.
      *
-     * @param user - It will take user details as argument.
+     * @param customer - It will take user details as argument.
      * @return - It return user type.
      * @throws UserAlreadyExistsException - If any chance user already exists then it will throw exception.
      */
     @Override
-    public User addUser(User user) throws UserAlreadyExistsException {
-        if (userRepository.findById(user.getUserEmailId()).isPresent()) {
+    public Customer addUser(Customer customer) throws UserAlreadyExistsException {
+        if (userRepository.findById(customer.getCustomerEmailId()).isPresent()) {
             throw new UserAlreadyExistsException();
         } else {
-            return userRepository.save(user);
+            return userRepository.save(customer);
         }
     }
 
     /**
      * This method is to login from User details.
      *
-     * @param user - It will take user details as argument.
+     * @param customer - It will take user details as argument.
      * @return - It return user type.
      * @throws UserNotFoundException - If any chance user not found then it will throw exception.
      */
     @Override
-    public User loginUser(User user) throws UserNotFoundException {
-        if (userRepository.findById(user.getUserEmailId()).isEmpty()) {
+    public Customer loginUser(Customer customer) throws UserNotFoundException {
+        if (userRepository.findById(customer.getCustomerEmailId()).isEmpty()) {
             throw new UserNotFoundException();
         } else {
-            User loginUser = userRepository.findById(user.getUserEmailId()).get();
-            if (loginUser.getPassword().equals(user.getPassword())) {
-                return loginUser;
+            Customer loginCustomer = userRepository.findById(customer.getCustomerEmailId()).get();
+            if (loginCustomer.getPassword().equals(customer.getPassword())) {
+                return loginCustomer;
             }
         }
         return null;

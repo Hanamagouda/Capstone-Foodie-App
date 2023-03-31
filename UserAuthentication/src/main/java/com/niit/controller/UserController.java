@@ -6,7 +6,7 @@
 
 package com.niit.controller;
 
-import com.niit.domain.User;
+import com.niit.domain.Customer;
 import com.niit.exception.UserAlreadyExistsException;
 import com.niit.exception.UserNotFoundException;
 import com.niit.security.JwtSecurityTokenGenerator;
@@ -36,16 +36,16 @@ public class UserController {
     /**
      * This method is register the user.
      *
-     * @param user
+     * @param customer
      * @return User Details
      */
 
     @PostMapping("/register")
-    public ResponseEntity<?> addUser(@RequestBody User user) {
+    public ResponseEntity<?> addUser(@RequestBody Customer customer) {
         try {
-            User registeredUser = userService.addUser(user);
-            if (registeredUser != null) {
-                return new ResponseEntity<User>(registeredUser, HttpStatus.OK);
+            Customer registeredCustomer = userService.addUser(customer);
+            if (registeredCustomer != null) {
+                return new ResponseEntity<Customer>(registeredCustomer, HttpStatus.OK);
             } else {
                 throw new UserNotFoundException();
             }
@@ -57,16 +57,16 @@ public class UserController {
     /**
      * This method is to Login from user details
      *
-     * @param user
+     * @param customer
      * @return Login details
      */
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody User user) {
+    public ResponseEntity<?> loginUser(@RequestBody Customer customer) {
         try {
-            User loggedUser = userService.loginUser(user);
-            if (loggedUser != null) {
-                return new ResponseEntity<>(jwtSecurityTokenGenerator.tokenGenerator(loggedUser), HttpStatus.ACCEPTED);
+            Customer loggedCustomer = userService.loginUser(customer);
+            if (loggedCustomer != null) {
+                return new ResponseEntity<>(jwtSecurityTokenGenerator.tokenGenerator(loggedCustomer), HttpStatus.ACCEPTED);
             } else {
                 throw new UserAlreadyExistsException();
             }

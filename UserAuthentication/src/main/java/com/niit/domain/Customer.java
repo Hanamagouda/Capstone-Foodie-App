@@ -17,11 +17,9 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @ToString
-public class User {
-
-    //Instance variables of User
+public class Customer {
     @Id
-    private String userEmailId;
+    private String customerEmailId;
     private String password;
     private String typeOfUser;
 }

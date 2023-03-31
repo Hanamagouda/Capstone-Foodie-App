@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/proxy/CustomerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/proxy/CustomerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/test/java/com/niit/UserAuthenticationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/test/java/com/niit/CustomerAuthenticationApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +77,26 @@
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserAuthenticationApplication">
+  <component name="RunManager" selected="Application.CustomerServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.ApiGatewayApplication" />
       <module name="APIGateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.*" />
+          <option name="PATTERN" value="com.niit.CustomerAuthenticationApplicationTests" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.CustomerServiceApplication" />
+      <module name="CustomerService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.CustomerAuthenticationApplicationTests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,7 +109,7 @@
       <module name="EurekaServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.*" />
+          <option name="PATTERN" value="com.niit.CustomerAuthenticationApplicationTests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,7 +122,7 @@
       <module name="UserAuthentication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.*" />
+          <option name="PATTERN" value="com.niit.CustomerAuthenticationApplicationTests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,6 +132,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
@@ -228,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680240122336</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Written CustomerController class inside the CustomerService">
+      <created>1680246302497</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680246302497</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -250,7 +289,8 @@
     <MESSAGE value="Created proxy interface inside the CustomerService.java" />
     <MESSAGE value="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class." />
     <MESSAGE value="Written Some more logics for deleteRestaurant, getCustomerById inside the serviceImpl class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Written Some more logics for deleteRestaurant, getCustomerById inside the serviceImpl class." />
+    <MESSAGE value="Written CustomerController class inside the CustomerService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written CustomerController class inside the CustomerService" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

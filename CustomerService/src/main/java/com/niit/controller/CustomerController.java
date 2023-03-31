@@ -30,16 +30,16 @@ public class CustomerController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody Customer customer) {
+    public ResponseEntity<?> addCustomer(@RequestBody Customer customer) {
         try {
-            Customer registeredCustomer = customerService.registerCustomer(customer);
-            if (registeredCustomer == null) {
+            Customer registeredUser = customerService.registerCustomer(customer);
+            if (registeredUser == null) {
                 throw new CustomerAlreadyExistsException();
             } else {
-                return new ResponseEntity<Customer>(registeredCustomer, HttpStatus.OK);
+                return new ResponseEntity<Customer>(registeredUser, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to register new user", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Error Occurred while registered new user", HttpStatus.BAD_REQUEST);
         }
     }
 
