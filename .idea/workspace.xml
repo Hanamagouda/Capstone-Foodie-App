@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/repository/CustomerRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -183,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680164394954</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add Doc Comment inside UserAuthentication Application">
+      <created>1680166649510</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680166649510</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -197,7 +201,8 @@
     <MESSAGE value="Written UserController and application.properties inside the UserAuthentication application." />
     <MESSAGE value="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations." />
     <MESSAGE value="Some Changes happened inside the userAuthentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Changes happened inside the userAuthentication" />
+    <MESSAGE value="Add Doc Comment inside UserAuthentication Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Doc Comment inside UserAuthentication Application" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -24,6 +24,7 @@ public class Customer {
     private String password;
     private String customerContactNumber;
     private String customerImage;
+    private String typeOfUser;
     private List<Restaurant> favorite;
     private Address address;
 
