@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
     </list>
@@ -216,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680236623901</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class.">
+      <created>1680238228407</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680238228407</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -236,7 +242,8 @@
     <MESSAGE value="Created two more exception class inside the CustomerService." />
     <MESSAGE value="Created CustomerService interface inside the service package in CustomerService.java" />
     <MESSAGE value="Created proxy interface inside the CustomerService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created proxy interface inside the CustomerService.java" />
+    <MESSAGE value="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

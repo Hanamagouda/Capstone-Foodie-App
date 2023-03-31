@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
@@ -63,16 +64,35 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer getCustomerById(String emailId) throws CustomerNotFoundException {
-        return null;
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        return customerRepo.findById(emailId).get();
     }
 
     @Override
     public List<Restaurant> getFavoriteRestaurants(String emailId) throws CustomerNotFoundException {
-        return null;
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        List<Restaurant> favorite = customerRepo.findById(emailId).get().getFavorite();
+        return favorite;
     }
 
     @Override
-    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException {
-        return null;
+    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        Customer customer = customerRepo.findById(emailId).get();
+        List<Restaurant> favorite = customer.getFavorite();
+        for (Restaurant restro : favorite) {
+            if (restro.getRestaurantId() != (restaurantId)) {
+                throw new RestaurantNotFoundException();
+            } else {
+                favorite.remove(restro);
+            }
+        }
+        return favorite;
     }
 }
