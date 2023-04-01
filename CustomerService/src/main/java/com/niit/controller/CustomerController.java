@@ -30,16 +30,16 @@ public class CustomerController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> addCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<?> registerUser(@RequestBody Customer customer) {
         try {
-            Customer registeredUser = customerService.registerCustomer(customer);
-            if (registeredUser == null) {
+            Customer registeredCustomer = customerService.registerCustomer(customer);
+            if (registeredCustomer == null) {
                 throw new CustomerAlreadyExistsException();
             } else {
-                return new ResponseEntity<Customer>(registeredUser, HttpStatus.OK);
+                return new ResponseEntity<Customer>(registeredCustomer, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<>("Error Occurred while registered new user", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Error Occurred while trying to register new user", HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -86,13 +86,13 @@ public class CustomerController {
     }
 
     @DeleteMapping("/deleteRestro/{emailId}/{restaurantId}")
-    public ResponseEntity<?> deleteRestaurantFromFavorite(@PathVariable String emailId, @PathVariable String restaurantId) {
+    public ResponseEntity<?> deleteRestaurantFromFavorite(@PathVariable String emailId, @PathVariable String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         try {
-            List<Restaurant> restaurants = customerService.deleteRestaurantFromFavorite(emailId, restaurantId);
-            if (restaurants == null) {
-                throw new RestaurantNotFoundException();
+            Customer customer = customerService.deleteRestaurantFromFavorite(emailId, restaurantId);
+            if (customer == null) {
+                throw new CustomerNotFoundException();
             } else {
-                return new ResponseEntity<List<Restaurant>>(restaurants, HttpStatus.OK);
+                return new ResponseEntity<Customer>(customer, HttpStatus.OK);
             }
         } catch (Exception exception) {
             return new ResponseEntity<>("Error Occurred while trying to delete specific restaurant from favorite", HttpStatus.BAD_REQUEST);

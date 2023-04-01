@@ -20,10 +20,10 @@ import java.util.List;
 @ToString
 public class Customer {
     @Id
-    private String customerEmailId;
+    private String emailId;
     private String password;
-    private String customerContactNumber;
-    private String customerImage;
+    private String contactNumber;
+    private String image;
     private String typeOfUser;
     private List<Restaurant> favorite;
     private Address address;

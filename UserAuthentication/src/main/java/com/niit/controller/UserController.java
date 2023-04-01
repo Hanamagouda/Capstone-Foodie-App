@@ -6,9 +6,8 @@
 
 package com.niit.controller;
 
-import com.niit.domain.Customer;
+import com.niit.domain.User;
 import com.niit.exception.UserAlreadyExistsException;
-import com.niit.exception.UserNotFoundException;
 import com.niit.security.JwtSecurityTokenGenerator;
 import com.niit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,37 +35,37 @@ public class UserController {
     /**
      * This method is register the user.
      *
-     * @param customer
+     * @param user
      * @return User Details
      */
 
     @PostMapping("/register")
-    public ResponseEntity<?> addUser(@RequestBody Customer customer) {
+    public ResponseEntity<?> addUser(@RequestBody User user) {
         try {
-            Customer registeredCustomer = userService.addUser(customer);
-            if (registeredCustomer != null) {
-                return new ResponseEntity<Customer>(registeredCustomer, HttpStatus.OK);
+            User registeredUser = userService.addUser(user);
+            if (registeredUser == null) {
+                throw new UserAlreadyExistsException();
             } else {
-                throw new UserNotFoundException();
+                return new ResponseEntity<User>(registeredUser, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to register new user", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Error Occurred while trying to add new user", HttpStatus.BAD_REQUEST);
         }
     }
 
     /**
      * This method is to Login from user details
      *
-     * @param customer
+     * @param user
      * @return Login details
      */
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody Customer customer) {
+    public ResponseEntity<?> loginUser(@RequestBody User user) {
         try {
-            Customer loggedCustomer = userService.loginUser(customer);
-            if (loggedCustomer != null) {
-                return new ResponseEntity<>(jwtSecurityTokenGenerator.tokenGenerator(loggedCustomer), HttpStatus.ACCEPTED);
+            User loggedUser = userService.loginUser(user);
+            if (loggedUser != null) {
+                return new ResponseEntity<>(jwtSecurityTokenGenerator.tokenGenerator(loggedUser), HttpStatus.ACCEPTED);
             } else {
                 throw new UserAlreadyExistsException();
             }

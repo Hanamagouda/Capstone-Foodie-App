@@ -19,7 +19,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -38,11 +37,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer registerCustomer(Customer customer) throws CustomerAlreadyExistsException {
-        if (customerRepo.findById(customer.getCustomerEmailId()).isPresent()) {
+        if (customerRepo.findById(customer.getEmailId()).isPresent()) {
             throw new CustomerAlreadyExistsException();
         }
         Customer savedCustomer = customerRepo.save(customer);
-        if (!(savedCustomer.getCustomerEmailId().isEmpty())) {
+        if (!(savedCustomer.getEmailId().isEmpty())) {
             ResponseEntity<?> responseEntity = customerProxy.saveCustomerToAuthentication(savedCustomer);
         }
         return savedCustomer;
@@ -82,19 +81,16 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
+    public Customer deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         if (customerRepo.findById(emailId).isEmpty()) {
             throw new CustomerNotFoundException();
         }
         Customer customer = customerRepo.findById(emailId).get();
-        List<Restaurant> favorite = customer.getFavorite();
-        for (Restaurant restro : favorite) {
-            if (restro.getRestaurantId() != (restaurantId)) {
-                throw new RestaurantNotFoundException();
-            } else {
-                favorite.remove(restro);
-            }
+        if (!(customer.getFavorite().get(0).getRestaurantId().equals(restaurantId))) {
+            throw new RestaurantNotFoundException();
+        } else {
+            customer.getFavorite().removeIf(restro -> restro.getRestaurantId().equals(restaurantId));
         }
-        return favorite;
+        return customerRepo.save(customer);
     }
 }

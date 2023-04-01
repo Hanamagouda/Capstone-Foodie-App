@@ -6,11 +6,11 @@
 
 package com.niit.repository;
 
-import com.niit.domain.Customer;
+import com.niit.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<Customer, String> {
+public interface UserRepository extends JpaRepository<User, String> {
     // @Repository used to access the information in DataBase
 }

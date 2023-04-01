@@ -17,9 +17,9 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @ToString
-public class Customer {
+public class User {
     @Id
-    private String customerEmailId;
+    private String emailId;
     private String password;
     private String typeOfUser;
 }
