@@ -26,6 +26,7 @@
     <module>APIGateway</module>
     <module>EurekaServer</module>
     <module>CustomerService</module>
+    <module>RestaurantService</module>
   </modules>
 
   <dependencies>
