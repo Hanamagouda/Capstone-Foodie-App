@@ -8,14 +8,14 @@ package com.niit.controller;
 
 import com.niit.domain.Restaurant;
 import com.niit.exception.RestaurantAlreadyExistsException;
+import com.niit.exception.RestaurantNotFoundException;
 import com.niit.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/restaurant")
@@ -39,6 +39,20 @@ public class RestaurantController {
             }
         } catch (Exception exception) {
             return new ResponseEntity<String>("Error Occurred while add new Restaurant", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/allRestro")
+    public ResponseEntity<?> getAllRestaurants() {
+        try {
+            List<Restaurant> allRestaurant = restaurantService.getAllRestaurant();
+            if (allRestaurant == null) {
+                throw new RestaurantNotFoundException();
+            } else {
+                return new ResponseEntity<>(allRestaurant, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<>("Error Occurred while trying to fetch all restaurants", HttpStatus.BAD_REQUEST);
         }
     }
 }
