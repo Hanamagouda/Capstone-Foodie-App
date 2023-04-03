@@ -81,14 +81,8 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant) throws RestaurantAlreadyExistsException {
-        if (restaurantRepo.findById(restaurant.getRestaurantId()).isPresent()) {
-            throw new RestaurantAlreadyExistsException();
-        }
-        Restaurant savedRestaurant = restaurantRepo.save(restaurant);
-        if (!(savedRestaurant.getRestaurantId().isEmpty())) {
-            ResponseEntity<?> responseEntity = restaurantProxy.addRestaurantToFavorite(emailId, restaurant);
-        }
-        return savedRestaurant;
+    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant) {
+        ResponseEntity<?> responseEntity = restaurantProxy.addRestaurantToFavorite(emailId, restaurant);
+        return restaurant;
     }
 }
