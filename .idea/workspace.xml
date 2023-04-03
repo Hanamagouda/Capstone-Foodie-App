@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -326,13 +325,19 @@
       <option name="project" value="LOCAL" />
       <updated>1680501451866</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Written getAllCuisine Logic inside the RestaurantController.java">
+      <created>1680501768770</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1680501768771</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written add user and login user inside the service class." />
     <MESSAGE value="edit login user logic inside the service class." />
     <MESSAGE value="Created security token generator JwtSecurityTokenGenerator interface and JwtSecurityTokenGeneratorImpl class." />
     <MESSAGE value="Written UserController and application.properties inside the UserAuthentication application." />
@@ -357,7 +362,8 @@
     <MESSAGE value="Written addRestro Logic inside the RestaurantController.java" />
     <MESSAGE value="Written getAllRestaurants Logic inside the RestaurantController.java" />
     <MESSAGE value="Written addCuisine Logic inside the RestaurantController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Written addCuisine Logic inside the RestaurantController.java" />
+    <MESSAGE value="Written getAllCuisine Logic inside the RestaurantController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written getAllCuisine Logic inside the RestaurantController.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

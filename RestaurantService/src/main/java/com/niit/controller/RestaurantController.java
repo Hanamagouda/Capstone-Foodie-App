@@ -96,7 +96,7 @@ public class RestaurantController {
                 return new ResponseEntity<>(addRestaurantToFavorite, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to add restaurant to specific customer favorite", HttpStatus.BAD_REQUEST)
+            return new ResponseEntity<String>("Error Occurred while trying to add restaurant to specific customer favorite", HttpStatus.BAD_REQUEST);
         }
     }
 }
