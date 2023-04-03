@@ -85,4 +85,18 @@ public class RestaurantController {
             return new ResponseEntity<String>("Error Occurred while trying to fetch all Cuisine", HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping("/addRestroTofavorite/{emailId}")
+    public ResponseEntity<?> addRestaurantToFavorite(@PathVariable String emailId, @RequestBody Restaurant restaurant) {
+        try {
+            Restaurant addRestaurantToFavorite = restaurantService.addRestaurantToFavorite(emailId, restaurant);
+            if (addRestaurantToFavorite == null) {
+                throw new RestaurantAlreadyExistsException();
+            } else {
+                return new ResponseEntity<>(addRestaurantToFavorite, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to add restaurant to specific customer favorite", HttpStatus.BAD_REQUEST)
+        }
+    }
 }
