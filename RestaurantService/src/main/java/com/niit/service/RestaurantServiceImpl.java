@@ -85,4 +85,12 @@ public class RestaurantServiceImpl implements RestaurantService {
         ResponseEntity<?> responseEntity = restaurantProxy.addRestaurantToFavorite(emailId, restaurant);
         return restaurant;
     }
+
+    @Override
+    public List<Restaurant> searchByLocation(String restaurantLocation) throws RestaurantNotFoundException {
+        if (restaurantRepo.findByLocation(restaurantLocation).isEmpty()) {
+            throw new RestaurantNotFoundException();
+        }
+        return restaurantRepo.findByLocation(restaurantLocation);
+    }
 }

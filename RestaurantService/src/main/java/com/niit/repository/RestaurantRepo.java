@@ -11,8 +11,10 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface RestaurantRepo extends MongoRepository<Restaurant, String> {
-    @Query("{'restaurantByLocation':?0}")
-    public Restaurant findByLocation(String restaurantLocation);
+    @Query("{'restaurantLocation':?0}")
+    public List<Restaurant> findByLocation(String restaurantLocation);
 }
