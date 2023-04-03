@@ -71,7 +71,7 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/allRestro/{emailId}")
+    @GetMapping("/user/allRestro/{emailId}")
     public ResponseEntity<?> getFavoriteRestaurants(@PathVariable String emailId) {
         try {
             List<Restaurant> favoriteRestaurants = customerService.getFavoriteRestaurants(emailId);

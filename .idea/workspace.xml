@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/exception/CuisineAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/exception/CuisineNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/exception/RestaurantAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/exception/RestaurantNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIGateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/mvnw.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EurekaServer/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/security/JwtSecurityTokenGeneratorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/java/com/niit/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/test/java/com/niit/CustomerAuthenticationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/test/java/com/niit/UserAuthenticationApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +261,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680262100090</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Did Some changes inside the addCustomer and deleteRestaurant method in CustomerService.java">
+      <created>1680374128366</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680374128366</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Created RestaurantServiceApplication.java microservice and added inside the foodie application as a child">
+      <created>1680375103344</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1680375103344</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -298,7 +299,10 @@
     <MESSAGE value="Written Some more logics for deleteRestaurant, getCustomerById inside the serviceImpl class." />
     <MESSAGE value="Written CustomerController class inside the CustomerService" />
     <MESSAGE value="Written proxy inside the CustomerService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Written proxy inside the CustomerService.java" />
+    <MESSAGE value="Did Some changes inside the addCustomer and deleteRestaurant method in CustomerService.java" />
+    <MESSAGE value="Created RestaurantServiceApplication.java microservice and added inside the foodie application as a child" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created RestaurantServiceApplication.java microservice and added inside the foodie application as a child" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
