@@ -6,12 +6,16 @@
 
 package com.niit.Proxy;
 
-public class RestaurantProxy {
-}
+import com.niit.domain.Restaurant;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
-//@FeignClient(name = "user-authentication-service", url = "http://localhost:8083")
-//public interface CustomerProxy {
-//
-//    @PostMapping("/userAuth/register")
-//    public ResponseEntity<?> saveCustomerToAuthentication(@RequestBody Customer customer);
-//}
+@FeignClient(name = "user-customer-service", url = "localhost:8081")
+public interface RestaurantProxy {
+
+    @PostMapping("/customer/addRestro/{emailId}")
+    public ResponseEntity<?> addRestaurantToFavorite(@PathVariable String emailId, @RequestBody Restaurant restaurant);
+}
