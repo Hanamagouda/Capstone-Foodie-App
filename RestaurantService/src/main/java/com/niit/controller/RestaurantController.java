@@ -6,6 +6,7 @@
 
 package com.niit.controller;
 
+import com.niit.domain.Cuisine;
 import com.niit.domain.Restaurant;
 import com.niit.exception.RestaurantAlreadyExistsException;
 import com.niit.exception.RestaurantNotFoundException;
@@ -49,10 +50,24 @@ public class RestaurantController {
             if (allRestaurant == null) {
                 throw new RestaurantNotFoundException();
             } else {
-                return new ResponseEntity<>(allRestaurant, HttpStatus.OK);
+                return new ResponseEntity<List<Restaurant>>(allRestaurant, HttpStatus.OK);
             }
         } catch (Exception exception) {
             return new ResponseEntity<>("Error Occurred while trying to fetch all restaurants", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/addCuisine/{restaurantId}")
+    public ResponseEntity<?> addCuisine(@PathVariable String restaurantId, @RequestBody Cuisine cuisine) {
+        try {
+            Restaurant restaurant = restaurantService.addCuisine(restaurantId, cuisine);
+            if (restaurant == null) {
+                throw new RestaurantNotFoundException();
+            } else {
+                return new ResponseEntity<>(restaurant, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<>("Error Occurred while trying to add Cuisine in Restaurant", HttpStatus.BAD_REQUEST);
         }
     }
 }
