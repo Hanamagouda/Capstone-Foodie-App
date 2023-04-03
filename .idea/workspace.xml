@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,15 +369,27 @@
       <option name="project" value="LOCAL" />
       <updated>1680502608985</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Add one custom derived query method in RestaurantRepo.java">
+      <created>1680504891027</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1680504891028</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java">
+      <created>1680505214785</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1680505214786</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations." />
-    <MESSAGE value="Some Changes happened inside the userAuthentication" />
     <MESSAGE value="Add Doc Comment inside UserAuthentication Application" />
     <MESSAGE value="Created exception class inside the CustomerService." />
     <MESSAGE value="Created two more exception class inside the CustomerService." />
@@ -402,7 +413,9 @@
     <MESSAGE value="Written addRestaurantToFavroite() Logic inside the RestaurantController.java" />
     <MESSAGE value="Written application.properties for RestaurantService.java" />
     <MESSAGE value="Add Restaurant api path in API Gateway and put annotations inside the main class in RestaurantServiceApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Restaurant api path in API Gateway and put annotations inside the main class in RestaurantServiceApplication.java" />
+    <MESSAGE value="Add one custom derived query method in RestaurantRepo.java" />
+    <MESSAGE value="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

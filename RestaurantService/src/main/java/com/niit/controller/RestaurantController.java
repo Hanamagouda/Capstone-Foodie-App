@@ -99,4 +99,18 @@ public class RestaurantController {
             return new ResponseEntity<String>("Error Occurred while trying to add restaurant to specific customer favorite", HttpStatus.BAD_REQUEST);
         }
     }
+
+    @GetMapping("/byLocation/{restaurantLocation}")
+    public ResponseEntity<?> searchByLocation(@PathVariable String restaurantLocation) {
+        try {
+            List<Restaurant> restaurants = restaurantService.searchByLocation(restaurantLocation);
+            if (restaurants == null) {
+                throw new RestaurantNotFoundException();
+            } else {
+                return new ResponseEntity<List<Restaurant>>(restaurants, HttpStatus.ACCEPTED);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to fetch restaurant by location", HttpStatus.BAD_REQUEST);
+        }
+    }
 }
