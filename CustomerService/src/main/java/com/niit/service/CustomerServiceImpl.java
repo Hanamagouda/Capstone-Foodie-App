@@ -58,6 +58,7 @@ public class CustomerServiceImpl implements CustomerService {
         } else if (customer.getFavorite().contains(restaurant)) {
             throw new RestaurantAlreadyExistsException();
         } else {
+            customer.getFavorite().removeIf(restro -> restro.getRestaurantId().equals(restaurant.getRestaurantId()));
             customer.getFavorite().add(restaurant);
         }
         return customerRepo.save(customer);
