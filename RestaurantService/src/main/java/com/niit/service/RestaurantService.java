@@ -27,5 +27,5 @@ public interface RestaurantService {
 
     public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant);
 
-    public List<Restaurant> searchByLocation(String restaurantLocation) throws RestaurantNotFoundException;
+    public List<Restaurant> restaurantSearchByLocation(String restaurantLocation) throws RestaurantNotFoundException;
 }

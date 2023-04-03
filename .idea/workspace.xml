@@ -7,6 +7,9 @@
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.RestaurantServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
@@ -383,14 +386,20 @@
       <option name="project" value="LOCAL" />
       <updated>1680505214786</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Written GetMapping request for searchByLocation() inside RestaurantController.java">
+      <created>1680505558126</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1680505558126</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Doc Comment inside UserAuthentication Application" />
     <MESSAGE value="Created exception class inside the CustomerService." />
     <MESSAGE value="Created two more exception class inside the CustomerService." />
     <MESSAGE value="Created CustomerService interface inside the service package in CustomerService.java" />
@@ -415,7 +424,8 @@
     <MESSAGE value="Add Restaurant api path in API Gateway and put annotations inside the main class in RestaurantServiceApplication.java" />
     <MESSAGE value="Add one custom derived query method in RestaurantRepo.java" />
     <MESSAGE value="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java" />
+    <MESSAGE value="Written GetMapping request for searchByLocation() inside RestaurantController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written GetMapping request for searchByLocation() inside RestaurantController.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

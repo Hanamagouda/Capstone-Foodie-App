@@ -87,7 +87,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Restaurant> searchByLocation(String restaurantLocation) throws RestaurantNotFoundException {
+    public List<Restaurant> restaurantSearchByLocation(String restaurantLocation) throws RestaurantNotFoundException {
         if (restaurantRepo.findByLocation(restaurantLocation).isEmpty()) {
             throw new RestaurantNotFoundException();
         }

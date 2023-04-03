@@ -100,17 +100,17 @@ public class RestaurantController {
         }
     }
 
-    @GetMapping("/byLocation/{restaurantLocation}")
+    @GetMapping("/location/{restaurantLocation}")
     public ResponseEntity<?> searchByLocation(@PathVariable String restaurantLocation) {
         try {
-            List<Restaurant> restaurants = restaurantService.searchByLocation(restaurantLocation);
+            List<Restaurant> restaurants = restaurantService.restaurantSearchByLocation(restaurantLocation);
             if (restaurants == null) {
                 throw new RestaurantNotFoundException();
             } else {
                 return new ResponseEntity<List<Restaurant>>(restaurants, HttpStatus.ACCEPTED);
             }
-        } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to fetch restaurant by location", HttpStatus.BAD_REQUEST);
+        } catch (RestaurantNotFoundException exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to fetch restaurant by location", HttpStatus.NOT_FOUND);
         }
     }
 }

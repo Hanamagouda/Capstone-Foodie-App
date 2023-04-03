@@ -15,6 +15,6 @@ import java.util.List;
 
 @Repository
 public interface RestaurantRepo extends MongoRepository<Restaurant, String> {
-    @Query("{'restaurantLocation':?0}")
+    @Query("{'restaurantLocation' : {$in : [?0]}}")
     public List<Restaurant> findByLocation(String restaurantLocation);
 }
