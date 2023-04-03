@@ -26,6 +26,8 @@ public class AppConfig {
                         .uri("http://localhost:8083"))
                 .route(p -> p.path("/customer/**")
                         .uri("http://localhost:8081"))
+                .route(p -> p.path("/restaurant/**")
+                        .uri("http://localhost:8084"))
                 .build();
     }
 }
