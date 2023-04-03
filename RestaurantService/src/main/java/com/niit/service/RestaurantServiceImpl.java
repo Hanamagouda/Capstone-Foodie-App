@@ -7,6 +7,7 @@
 
 package com.niit.service;
 
+import com.niit.Proxy.RestaurantProxy;
 import com.niit.domain.Cuisine;
 import com.niit.domain.Restaurant;
 import com.niit.exception.CuisineAlreadyExistsException;
@@ -15,6 +16,7 @@ import com.niit.exception.RestaurantAlreadyExistsException;
 import com.niit.exception.RestaurantNotFoundException;
 import com.niit.repository.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -25,9 +27,12 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     private RestaurantRepo restaurantRepo;
 
+    private RestaurantProxy restaurantProxy;
+
     @Autowired
-    public RestaurantServiceImpl(RestaurantRepo restaurantRepo) {
+    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy) {
         this.restaurantRepo = restaurantRepo;
+        this.restaurantProxy = restaurantProxy;
     }
 
     @Override
@@ -76,8 +81,14 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurantId) throws RestaurantAlreadyExistsException {
-
-        return null;
+    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant) throws RestaurantAlreadyExistsException {
+        if (restaurantRepo.findById(restaurant.getRestaurantId()).isPresent()) {
+            throw new RestaurantAlreadyExistsException();
+        }
+        Restaurant savedRestaurant = restaurantRepo.save(restaurant);
+        if (!(savedRestaurant.getRestaurantId().isEmpty())) {
+            ResponseEntity<?> responseEntity = restaurantProxy.addRestaurantToFavorite(emailId, restaurant);
+        }
+        return savedRestaurant;
     }
 }

@@ -25,5 +25,5 @@ public interface RestaurantService {
 
     public List<Cuisine> getAllCuisine(String restaurantId) throws CuisineNotFoundException, RestaurantNotFoundException;
 
-    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurantId) throws RestaurantAlreadyExistsException;
+    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant) throws RestaurantAlreadyExistsException;
 }
