@@ -28,4 +28,6 @@ public interface RestaurantService {
     public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant);
 
     public List<Restaurant> restaurantSearchByLocation(String restaurantLocation) throws RestaurantNotFoundException;
+
+    public Cuisine addCuisineToOrder(String orderId, Cuisine cuisine);
 }

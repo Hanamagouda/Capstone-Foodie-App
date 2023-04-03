@@ -113,4 +113,18 @@ public class RestaurantController {
             return new ResponseEntity<String>("Error Occurred while trying to fetch restaurant by location", HttpStatus.NOT_FOUND);
         }
     }
+
+    @PostMapping("/addCuisineToOrder/{orderId}")
+    public ResponseEntity<?> addCuisineToOrder(@PathVariable String orderId, @RequestBody Cuisine cuisine) {
+        try {
+            Cuisine cuisineToOrder = restaurantService.addCuisineToOrder(orderId, cuisine);
+            if (cuisineToOrder == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<Cuisine>(cuisineToOrder, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to add cuisine to order", HttpStatus.BAD_REQUEST);
+        }
+    }
 }

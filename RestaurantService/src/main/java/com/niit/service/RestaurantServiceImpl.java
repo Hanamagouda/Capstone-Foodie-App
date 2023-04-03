@@ -7,6 +7,7 @@
 
 package com.niit.service;
 
+import com.niit.Proxy.OrderProxy;
 import com.niit.Proxy.RestaurantProxy;
 import com.niit.domain.Cuisine;
 import com.niit.domain.Restaurant;
@@ -28,11 +29,14 @@ public class RestaurantServiceImpl implements RestaurantService {
     private RestaurantRepo restaurantRepo;
 
     private RestaurantProxy restaurantProxy;
+    private OrderProxy orderProxy;
+
 
     @Autowired
-    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy) {
+    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy, OrderProxy orderProxy) {
         this.restaurantRepo = restaurantRepo;
         this.restaurantProxy = restaurantProxy;
+        this.orderProxy = orderProxy;
     }
 
     @Override
@@ -92,5 +96,11 @@ public class RestaurantServiceImpl implements RestaurantService {
             throw new RestaurantNotFoundException();
         }
         return restaurantRepo.findByLocation(restaurantLocation);
+    }
+
+    @Override
+    public Cuisine addCuisineToOrder(String orderId, Cuisine cuisine) {
+        ResponseEntity<?> responseEntity = orderProxy.saveCuisineToOrder(orderId, cuisine);
+        return cuisine;
     }
 }
