@@ -4,12 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
+    <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="Created Order Service and add required dependency in pom.xml">
+      <change afterPath="$PROJECT_DIR$/OrderService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Cuisine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/CuisineAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/CuisineNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/OrderAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/OrderNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/test/java/com/niit/OrderServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -393,15 +409,27 @@
       <option name="project" value="LOCAL" />
       <updated>1680505558126</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Some changes in Query request inside the RestaurantRepo.java">
+      <created>1680514383923</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1680514383923</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Created Order Service and add required dependency in pom.xml">
+      <created>1680514668157</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1680514668157</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created exception class inside the CustomerService." />
-    <MESSAGE value="Created two more exception class inside the CustomerService." />
     <MESSAGE value="Created CustomerService interface inside the service package in CustomerService.java" />
     <MESSAGE value="Created proxy interface inside the CustomerService.java" />
     <MESSAGE value="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class." />
@@ -425,7 +453,9 @@
     <MESSAGE value="Add one custom derived query method in RestaurantRepo.java" />
     <MESSAGE value="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java" />
     <MESSAGE value="Written GetMapping request for searchByLocation() inside RestaurantController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Written GetMapping request for searchByLocation() inside RestaurantController.java" />
+    <MESSAGE value="Some changes in Query request inside the RestaurantRepo.java" />
+    <MESSAGE value="Created Order Service and add required dependency in pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Order Service and add required dependency in pom.xml" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
