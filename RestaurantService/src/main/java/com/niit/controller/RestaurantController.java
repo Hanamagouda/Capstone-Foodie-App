@@ -8,6 +8,7 @@ package com.niit.controller;
 
 import com.niit.domain.Cuisine;
 import com.niit.domain.Restaurant;
+import com.niit.exception.CuisineNotFoundException;
 import com.niit.exception.RestaurantAlreadyExistsException;
 import com.niit.exception.RestaurantNotFoundException;
 import com.niit.service.RestaurantService;
@@ -53,7 +54,7 @@ public class RestaurantController {
                 return new ResponseEntity<List<Restaurant>>(allRestaurant, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<>("Error Occurred while trying to fetch all restaurants", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Error Occurred while trying to fetch all restaurants", HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -64,10 +65,24 @@ public class RestaurantController {
             if (restaurant == null) {
                 throw new RestaurantNotFoundException();
             } else {
-                return new ResponseEntity<>(restaurant, HttpStatus.OK);
+                return new ResponseEntity<Restaurant>(restaurant, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<>("Error Occurred while trying to add Cuisine in Restaurant", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Error Occurred while trying to add Cuisine in Restaurant", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/allCuisine/{restaurantId}")
+    public ResponseEntity<?> getAllCuisine(@PathVariable String restaurantId) {
+        try {
+            List<Cuisine> allCuisine = restaurantService.getAllCuisine(restaurantId);
+            if (allCuisine == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(allCuisine, HttpStatus.ACCEPTED);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to fetch all Cuisine", HttpStatus.BAD_REQUEST);
         }
     }
 }
