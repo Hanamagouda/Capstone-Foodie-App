@@ -6,19 +6,15 @@
 
 package com.niit.config;
 
-import org.bson.json.JsonObject;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.json.simple.JSONObject;
 
+@NoArgsConstructor
+@Getter
+@Setter
 public class OrderDTO {
-    private JsonObject jsonObject;
+    private JSONObject jsonObject;
 
-    public OrderDTO() {
-    }
-
-    public JsonObject getJsonObject() {
-        return jsonObject;
-    }
-
-    public void setJsonObject(JsonObject jsonObject) {
-        this.jsonObject = jsonObject;
-    }
 }

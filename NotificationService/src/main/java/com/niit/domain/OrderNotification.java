@@ -20,4 +20,6 @@ public class OrderNotification {
     @Id
     private String emailId;
     private String message;
+
+
 }
