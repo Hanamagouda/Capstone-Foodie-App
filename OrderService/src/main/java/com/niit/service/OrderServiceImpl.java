@@ -60,6 +60,7 @@ public class OrderServiceImpl implements OrderService {
             order.getOrderedItems().add(cuisine);
         }
         List<Cuisine> orderedItems = order.getOrderedItems();
+        orderRepository.save(order);
         return orderedItems;
     }
 

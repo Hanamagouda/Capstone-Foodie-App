@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="Created Order Service and add required dependency in pom.xml">
-      <change afterPath="$PROJECT_DIR$/OrderService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Cuisine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/CuisineAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/CuisineNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/OrderAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/exception/OrderNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/test/java/com/niit/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/filter/JwtFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/RestaurantServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/RestaurantServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ahmed/OneDrive/Desktop/Remedial Assignment/BackEndTask/BackendTask"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmed/OneDrive/Desktop/Remedial Assignment/BackEndTask/BackendTask&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java" />
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RestaurantServiceApplication">
+  <component name="RunManager" selected="Application.OrderServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.ApiGatewayApplication" />
       <module name="APIGateway" />
@@ -106,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.EurekaServerApplication" />
-      <module name="EurekaServer" />
+    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.OrderServiceApplication" />
+      <module name="OrderService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.UserAuthenticationApplicationTests" />
+          <option name="PATTERN" value="com.niit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RestaurantServiceApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -423,16 +410,34 @@
       <option name="project" value="LOCAL" />
       <updated>1680514668157</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Created OrderController.java inside the OrderService">
+      <created>1680521238730</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1680521238732</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Written application.properties inside the OrderService">
+      <created>1680521334697</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1680521334697</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Created order proxy in RestaurantService.java">
+      <created>1680522263189</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1680522263189</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created CustomerService interface inside the service package in CustomerService.java" />
-    <MESSAGE value="Created proxy interface inside the CustomerService.java" />
-    <MESSAGE value="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class." />
     <MESSAGE value="Written Some more logics for deleteRestaurant, getCustomerById inside the serviceImpl class." />
     <MESSAGE value="Written CustomerController class inside the CustomerService" />
     <MESSAGE value="Written proxy inside the CustomerService.java" />
@@ -455,7 +460,10 @@
     <MESSAGE value="Written GetMapping request for searchByLocation() inside RestaurantController.java" />
     <MESSAGE value="Some changes in Query request inside the RestaurantRepo.java" />
     <MESSAGE value="Created Order Service and add required dependency in pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Order Service and add required dependency in pom.xml" />
+    <MESSAGE value="Created OrderController.java inside the OrderService" />
+    <MESSAGE value="Written application.properties inside the OrderService" />
+    <MESSAGE value="Created order proxy in RestaurantService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created order proxy in RestaurantService.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

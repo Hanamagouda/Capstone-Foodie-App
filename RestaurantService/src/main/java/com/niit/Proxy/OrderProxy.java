@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "user-order-service", path = "localhost:8085")
+@FeignClient(name = "user-order-service", url = "localhost:8085")
 public interface OrderProxy {
-    @PostMapping("/addCuisineToOrder/{orderId}")
+    @PostMapping("/order/addCuisineToOrder/{orderId}")
     public ResponseEntity<?> saveCuisineToOrder(@PathVariable String orderId, @RequestBody Cuisine cuisine);
 }
