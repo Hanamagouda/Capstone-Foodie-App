@@ -6,13 +6,20 @@
 
 package com.niit.service;
 
+import com.niit.config.OrderDTO;
+import com.niit.config.OrderNotification;
+import com.niit.config.Producer;
 import com.niit.domain.Cuisine;
 import com.niit.domain.Order;
 import com.niit.exception.CuisineAlreadyExistException;
 import com.niit.exception.OrderAlreadyExistsException;
 import com.niit.exception.OrderNotFoundException;
 import com.niit.repository.OrderRepository;
+import org.json.simple.JSONObject;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -23,16 +30,39 @@ public class OrderServiceImpl implements OrderService {
 
     OrderRepository orderRepository;
 
+    private final Producer producer;
+
+    private JavaMailSender javaMailSender;
+
+    private DirectExchange exchange;
+
+    private RabbitTemplate rabbitTemplate;
+
     @Autowired
-    public OrderServiceImpl(OrderRepository orderRepository) {
+    public OrderServiceImpl(OrderRepository orderRepository, Producer producer, JavaMailSender javaMailSender, DirectExchange exchange, RabbitTemplate rabbitTemplate) {
         this.orderRepository = orderRepository;
+        this.producer = producer;
+        this.javaMailSender = javaMailSender;
+        this.exchange = exchange;
+        this.rabbitTemplate = rabbitTemplate;
     }
+
 
     @Override
     public Order addOrder(Order order) throws OrderAlreadyExistsException {
         if (orderRepository.findById(order.getOrderId()).isPresent()) {
             throw new OrderAlreadyExistsException();
         }
+        OrderDTO orderDTO = new OrderDTO();
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("orderId", order.getOrderId());
+        orderDTO.setJsonObject(jsonObject);
+
+        rabbitTemplate.convertAndSend(exchange.getName(), "order-routing", orderDTO);
+        OrderNotification details = new OrderNotification(order.getOrderId(), "Your Order has been placed SUCCESSFULLY", jsonObject);
+        producer.sendMessageToRabbitMq(details);
+
+
         return orderRepository.save(order);
     }
 

@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/controller/OrderNotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/java/com/niit/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +39,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2NieqeZyPvySWbr6LtavXEpFXAT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,28 +47,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmed/OneDrive/Desktop/Remedial Assignment/BackEndTask/BackendTask&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/ahmed/OneDrive/Desktop/Remedial Assignment/BackEndTask/BackendTask"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java" />
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OrderServiceApplication">
+  <component name="RunManager" selected="Application.UserAuthenticationApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.ApiGatewayApplication" />
       <module name="APIGateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.UserAuthenticationApplicationTests" />
+          <option name="PATTERN" value="com.niit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,12 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.CustomerServiceApplication" />
-      <module name="CustomerService" />
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.EurekaServerApplication" />
+      <module name="EurekaServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.UserAuthenticationApplicationTests" />
+          <option name="PATTERN" value="com.niit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,7 +121,7 @@
       <module name="UserAuthentication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.UserAuthenticationApplicationTests" />
+          <option name="PATTERN" value="com.niit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RestaurantServiceApplication" />
-        <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.RestaurantServiceApplication" />
       </list>
     </recent_temporary>
   </component>

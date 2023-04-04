@@ -15,11 +15,14 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mail.javamail.JavaMailSender;
 
 @Configuration
 public class MessageConfiguration {
     private String exchangeName = "order-exchange";
     private String queueName = "order-queue";
+
+    private JavaMailSender javaMailSender;
 
     @Bean
     public DirectExchange directExchange() {
