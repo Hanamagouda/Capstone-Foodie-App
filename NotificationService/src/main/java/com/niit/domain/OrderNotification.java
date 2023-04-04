@@ -7,6 +7,7 @@
 package com.niit.domain;
 
 import lombok.*;
+import org.json.simple.JSONObject;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -21,5 +22,5 @@ public class OrderNotification {
     private String emailId;
     private String message;
 
-
+    private JSONObject orderId;
 }
