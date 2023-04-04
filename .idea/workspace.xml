@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/controller/OrderNotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/config/MessageConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/config/OrderDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/controller/OrderNotificationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/domain/OrderNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/domain/OrderNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/repository/OrderNotificationRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderDTO.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RestaurantServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.RestaurantServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -146,13 +153,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Renamed exception class">
-      <created>1680154985569</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680154985569</updated>
     </task>
     <task id="LOCAL-00003" summary="Injected the user reposiotry inside the service class.">
       <created>1680155119771</created>
@@ -490,14 +490,20 @@
       <option name="project" value="LOCAL" />
       <updated>1680588960806</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Created MessageConfiguration.java and OrderDTO.java inside the OrderServiceApplication.java">
+      <created>1680590040161</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1680590040163</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written addRestro Logic inside the RestaurantController.java" />
     <MESSAGE value="Written getAllRestaurants Logic inside the RestaurantController.java" />
     <MESSAGE value="Written addCuisine Logic inside the RestaurantController.java" />
     <MESSAGE value="Written getAllCuisine Logic inside the RestaurantController.java" />
@@ -522,7 +528,8 @@
     <MESSAGE value="Added one more instance variable of type JsonObject in OrderNotification.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created OrderNotificationRepo.java interface inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created OrderNotificationServiceImpl.java class inside the NotificationServiceApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created OrderNotificationServiceImpl.java class inside the NotificationServiceApplication.java" />
+    <MESSAGE value="Created MessageConfiguration.java and OrderDTO.java inside the OrderServiceApplication.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created MessageConfiguration.java and OrderDTO.java inside the OrderServiceApplication.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
