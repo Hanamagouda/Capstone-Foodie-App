@@ -28,6 +28,7 @@
     <module>CustomerService</module>
     <module>RestaurantService</module>
     <module>OrderService</module>
+    <module>NotificationService</module>
   </modules>
 
   <dependencies>
