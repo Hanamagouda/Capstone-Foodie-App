@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotificationService/src/test/java/com/niit/NotificationServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,14 +448,20 @@
       <option name="project" value="LOCAL" />
       <updated>1680584993386</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Created Notification Service Application inside the Foodie Application">
+      <created>1680586264502</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1680586264502</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written proxy inside the CustomerService.java" />
     <MESSAGE value="Did Some changes inside the addCustomer and deleteRestaurant method in CustomerService.java" />
     <MESSAGE value="Created RestaurantServiceApplication.java microservice and added inside the foodie application as a child" />
     <MESSAGE value="Created exceptions in RestaurantService.java" />
@@ -471,7 +486,8 @@
     <MESSAGE value="Created order proxy in RestaurantService.java" />
     <MESSAGE value="Add Jwt filter in RestaurantServiceApplication.java" />
     <MESSAGE value="Add Jwt filter in OrderServiceApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Jwt filter in OrderServiceApplication.java" />
+    <MESSAGE value="Created Notification Service Application inside the Foodie Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Notification Service Application inside the Foodie Application" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
