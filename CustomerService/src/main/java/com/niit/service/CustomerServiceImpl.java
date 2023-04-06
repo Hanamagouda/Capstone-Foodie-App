@@ -89,6 +89,7 @@ public class CustomerServiceImpl implements CustomerService {
         if (customerRepo.findById(emailId).isPresent()) {
             Customer newCustomer = customerRepo.findById(emailId).get();
             if (customer.getEmailId() != null) {
+                newCustomer.setImage(customer.getImage());
                 newCustomer.setName(customer.getName());
                 newCustomer.setEmailId(customer.getEmailId());
                 newCustomer.setContactNumber(customer.getContactNumber());

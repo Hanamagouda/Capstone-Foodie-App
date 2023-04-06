@@ -98,4 +98,18 @@ public class CustomerController {
             return new ResponseEntity<>("Error Occurred while trying to delete specific restaurant from favorite", HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PutMapping("/update/{emailId}")
+    public ResponseEntity<?> updateCustomer(@PathVariable String emailId, @RequestBody Customer customer) {
+        try {
+            Customer updatedCustomer = customerService.updateCustomer(emailId, customer);
+            if (updatedCustomer == null) {
+                throw new CustomerNotFoundException();
+            } else {
+                return new ResponseEntity<Customer>(updatedCustomer, HttpStatus.ACCEPTED);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to update customer details", HttpStatus.BAD_GATEWAY);
+        }
+    }
 }
