@@ -82,6 +82,24 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Customer updateCustomer(String emailId, Customer customer) throws CustomerNotFoundException {
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        if (customerRepo.findById(emailId).isPresent()) {
+            Customer newCustomer = customerRepo.findById(emailId).get();
+            if (customer.getEmailId() != null) {
+                newCustomer.setName(customer.getName());
+                newCustomer.setEmailId(customer.getEmailId());
+                newCustomer.setContactNumber(customer.getContactNumber());
+                newCustomer.setAddress(customer.getAddress());
+            }
+            return customerRepo.save(newCustomer);
+        }
+        return null;
+    }
+
+    @Override
     public Customer deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         if (customerRepo.findById(emailId).isEmpty()) {
             throw new CustomerNotFoundException();

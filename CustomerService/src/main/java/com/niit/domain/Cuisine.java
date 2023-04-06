@@ -1,6 +1,6 @@
 /*
  * Author : Mushib Khan
- * Date : 30-03-2023
+ * Date : 05-04-2023
  * Created with : IntelliJ IDEA Community Edition
  */
 
@@ -9,9 +9,8 @@ package com.niit.domain;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
-
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -22,6 +21,4 @@ public class Cuisine {
     private double cuisinePrice;
     private String cuisineImage;
     private String description;
-
-
 }

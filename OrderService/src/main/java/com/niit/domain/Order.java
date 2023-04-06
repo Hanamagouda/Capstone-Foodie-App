@@ -24,6 +24,8 @@ public class Order {
     private int quantity;
     private double price;
     private List<Cuisine> orderedItems;
-
+    private String to;
+    private String subject;
+    private String body;
 
 }

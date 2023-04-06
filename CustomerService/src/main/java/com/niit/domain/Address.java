@@ -1,13 +1,15 @@
 /*
  * Author : Mushib Khan
- * Date : 30-03-2023
+ * Date : 05-04-2023
  * Created with : IntelliJ IDEA Community Edition
  */
 
 package com.niit.domain;
 
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

@@ -22,6 +22,7 @@ public class Customer {
     @Id
     private String emailId;
     private String password;
+    private String name;
     private String contactNumber;
     private String image;
     private String typeOfUser;
