@@ -13,6 +13,7 @@ import com.niit.exception.CustomerNotFoundException;
 import com.niit.exception.RestaurantAlreadyExistsException;
 import com.niit.exception.RestaurantNotFoundException;
 import com.niit.proxy.CustomerProxy;
+import com.niit.proxy.VendorProxy;
 import com.niit.repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,12 +28,13 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepo customerRepo;
 
     private CustomerProxy customerProxy;
-
+    private VendorProxy vendorProxy;
 
     @Autowired
-    public CustomerServiceImpl(CustomerRepo customerRepo, CustomerProxy customerProxy) {
+    public CustomerServiceImpl(CustomerRepo customerRepo, CustomerProxy customerProxy, VendorProxy vendorProxy) {
         this.customerRepo = customerRepo;
         this.customerProxy = customerProxy;
+        this.vendorProxy = vendorProxy;
     }
 
     @Override
@@ -43,6 +45,9 @@ public class CustomerServiceImpl implements CustomerService {
         Customer savedCustomer = customerRepo.save(customer);
         if (!(savedCustomer.getEmailId().isEmpty())) {
             ResponseEntity<?> responseEntity = customerProxy.saveCustomerToAuthentication(savedCustomer);
+        }
+        if (savedCustomer.getTypeOfUser().equalsIgnoreCase("vendor")) {
+            ResponseEntity<?> responseEntity = vendorProxy.saveCustomerToVendor(savedCustomer);
         }
         return savedCustomer;
     }
@@ -91,7 +96,6 @@ public class CustomerServiceImpl implements CustomerService {
             if (customer.getEmailId() != null) {
                 newCustomer.setImage(customer.getImage());
                 newCustomer.setName(customer.getName());
-                newCustomer.setEmailId(customer.getEmailId());
                 newCustomer.setContactNumber(customer.getContactNumber());
                 newCustomer.setAddress(customer.getAddress());
             }

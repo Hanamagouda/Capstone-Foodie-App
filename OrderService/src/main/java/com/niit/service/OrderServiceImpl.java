@@ -81,7 +81,6 @@ public class OrderServiceImpl implements OrderService {
         }
         order.getOrderedItems().removeIf(cuisine -> cuisine.getCuisineId() == cuisineId);
         orderRepository.save(order);
-        List<Cuisine> orderedItems = order.getOrderedItems();
-        return orderedItems;
+        return order.getOrderedItems();
     }
 }
