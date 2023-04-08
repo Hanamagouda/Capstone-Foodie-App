@@ -1,6 +1,6 @@
 /*
  * Author : Mushib Khan
- * Date : 02-04-2023
+ * Date : 08-04-2023
  * Created with : IntelliJ IDEA Community Edition
  */
 
@@ -10,19 +10,17 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
-
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Restaurant {
+public class Cuisine {
     @Id
-    private String restaurantId;
-    private String restaurantName;
-    private String restaurantLocation;
-    private String restaurantImage;
-    private List<Cuisine> cuisineList;
+    private int cuisineId;
+    private String cuisineName;
+    private double cuisinePrice;
+    private String cuisineImage;
+    private String description;
 }

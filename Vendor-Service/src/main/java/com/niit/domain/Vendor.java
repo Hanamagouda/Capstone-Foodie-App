@@ -10,6 +10,8 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,4 +23,5 @@ public class Vendor {
     private String vendorId;
     private String vendorName;
     private String contactNumber;
+    private List<Restaurant> restaurants;
 }
