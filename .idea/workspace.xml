@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/VendorServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/domain/Vendor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/test/java/com/niit/VendorServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/VendorServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/domain/Cuisine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/domain/Vendor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vendor-Service/src/test/java/com/niit/VendorServiceApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,27 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Created security token generator JwtSecurityTokenGenerator interface and JwtSecurityTokenGeneratorImpl class.">
-      <created>1680156034596</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680156034597</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Written UserController and application.properties inside the UserAuthentication application.">
-      <created>1680158323857</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1680158323859</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Created ApiGatewayApplication, EurekaServerApplication, and CustomerServiceApplication inside the CustomerServiceApplication we created domain class Address,Cuisine,Restaurant,and Customer and declare the all respective instance variable with all respective annotations.">
-      <created>1680162408678</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680162408678</updated>
     </task>
     <task id="LOCAL-00009" summary="Some Changes happened inside the userAuthentication">
       <created>1680164394954</created>
@@ -502,16 +484,34 @@
       <option name="project" value="LOCAL" />
       <updated>1680754240461</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Added one Vendor Application inside the Foodie Application">
+      <created>1680934496480</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1680934496482</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Created some instance variable in Vendor domain">
+      <created>1680934636100</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1680934636100</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Created Restaurant and Cuisine domain inside the Vendor.java">
+      <created>1680934960757</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1680934960758</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written addRestaurantToFavroite() Logic inside the RestaurantController.java" />
-    <MESSAGE value="Written application.properties for RestaurantService.java" />
-    <MESSAGE value="Add Restaurant api path in API Gateway and put annotations inside the main class in RestaurantServiceApplication.java" />
     <MESSAGE value="Add one custom derived query method in RestaurantRepo.java" />
     <MESSAGE value="Written business logic for searchByLocation() inside the RestaurantServiceImpl.java" />
     <MESSAGE value="Written GetMapping request for searchByLocation() inside RestaurantController.java" />
@@ -534,7 +534,10 @@
     <MESSAGE value="Created OrderNotification.java inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created updateCustomer() inside the CustomerServiceApplication.java" />
     <MESSAGE value="Created PutMapping request in CustomerController.java inside the CustomerServiceApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created PutMapping request in CustomerController.java inside the CustomerServiceApplication.java" />
+    <MESSAGE value="Added one Vendor Application inside the Foodie Application" />
+    <MESSAGE value="Created some instance variable in Vendor domain" />
+    <MESSAGE value="Created Restaurant and Cuisine domain inside the Vendor.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Restaurant and Cuisine domain inside the Vendor.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
