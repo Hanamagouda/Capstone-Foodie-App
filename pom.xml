@@ -29,6 +29,7 @@
     <module>RestaurantService</module>
     <module>OrderService</module>
     <module>NotificationService</module>
+    <module>Vendor-Service</module>
   </modules>
 
   <dependencies>

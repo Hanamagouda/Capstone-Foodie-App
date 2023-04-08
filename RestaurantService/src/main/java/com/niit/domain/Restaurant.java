@@ -25,4 +25,5 @@ public class Restaurant {
     private String restaurantLocation;
     private String restaurantImage;
     private List<Cuisine> cuisineList;
+    private String vendorId;
 }

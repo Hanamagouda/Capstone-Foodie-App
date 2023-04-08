@@ -5,28 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54fb74bb-4310-4c47-8ee1-b42d637c219f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/APIGateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/config/RabbitMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderNotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/VendorServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/main/java/com/niit/domain/Vendor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vendor-Service/src/test/java/com/niit/VendorServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/APIGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/CustomerServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/CustomerServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Cuisine.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Cuisine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/filter/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/filter/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +80,7 @@
       <module name="CustomerService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niit.UserAuthenticationApplicationTests" />
+          <option name="PATTERN" value="com.niit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,20 +158,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Written add user and login user inside the service class.">
-      <created>1680155386990</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680155386990</updated>
-    </task>
-    <task id="LOCAL-00005" summary="edit login user logic inside the service class.">
-      <created>1680155643119</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1680155643119</updated>
     </task>
     <task id="LOCAL-00006" summary="Created security token generator JwtSecurityTokenGenerator interface and JwtSecurityTokenGeneratorImpl class.">
       <created>1680156034596</created>
@@ -512,15 +488,27 @@
       <option name="project" value="LOCAL" />
       <updated>1680601939541</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Created updateCustomer() inside the CustomerServiceApplication.java">
+      <created>1680753361715</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1680753361716</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Created PutMapping request in CustomerController.java inside the CustomerServiceApplication.java">
+      <created>1680754240461</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1680754240461</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written addCuisine Logic inside the RestaurantController.java" />
-    <MESSAGE value="Written getAllCuisine Logic inside the RestaurantController.java" />
     <MESSAGE value="Written addRestaurantToFavroite() Logic inside the RestaurantController.java" />
     <MESSAGE value="Written application.properties for RestaurantService.java" />
     <MESSAGE value="Add Restaurant api path in API Gateway and put annotations inside the main class in RestaurantServiceApplication.java" />
@@ -544,7 +532,9 @@
     <MESSAGE value="Created OrderNotificationServiceImpl.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created MessageConfiguration.java and OrderDTO.java inside the OrderServiceApplication.java" />
     <MESSAGE value="Created OrderNotification.java inside the NotificationServiceApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created OrderNotification.java inside the NotificationServiceApplication.java" />
+    <MESSAGE value="Created updateCustomer() inside the CustomerServiceApplication.java" />
+    <MESSAGE value="Created PutMapping request in CustomerController.java inside the CustomerServiceApplication.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created PutMapping request in CustomerController.java inside the CustomerServiceApplication.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
