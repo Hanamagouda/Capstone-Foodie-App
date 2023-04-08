@@ -6,5 +6,19 @@
 
 package com.niit.domain;
 
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Vendor {
+    @Id
+    private String vendorId;
+    private String vendorName;
+    private String contactNumber;
 }
