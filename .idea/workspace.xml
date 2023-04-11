@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="Add two getAllVendor() and getById() inside the RestaurantVendor.java">
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/config/MessageConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/config/OrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/controller/OrderNotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/filter/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/repo/OrderNotificationRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/proxy/RestaurantProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/config/RabbitMqConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/domain/OrderNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/domain/OrderNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/RestaurantVendorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/RestaurantVendorApplication.java" afterDir="false" />
+    <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderNotification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderNotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ahmed/OneDrive/Desktop/Capstone Project/NotificationService"
+    "last_opened_file_path": "C:/Users/ahmed/OneDrive/Desktop/Capstone Project/OrderService"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -156,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Created exception class inside the CustomerService.">
-      <created>1680235089961</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1680235089962</updated>
     </task>
     <task id="LOCAL-00012" summary="Created two more exception class inside the CustomerService.">
       <created>1680235306366</created>
@@ -500,14 +488,20 @@
       <option name="project" value="LOCAL" />
       <updated>1681190416455</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Many changes did in NotificationServiceApplication.java">
+      <created>1681203369381</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1681203369381</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some changes in Query request inside the RestaurantRepo.java" />
     <MESSAGE value="Created Order Service and add required dependency in pom.xml" />
     <MESSAGE value="Created OrderController.java inside the OrderService" />
     <MESSAGE value="Written application.properties inside the OrderService" />
@@ -532,7 +526,8 @@
     <MESSAGE value="Created Restaurant Vendor instead of Vendor Service" />
     <MESSAGE value="Re-written RestaurantVendor Service and inside the CustomerServiceImpl.java changed the delete() logic." />
     <MESSAGE value="Add two getAllVendor() and getById() inside the RestaurantVendor.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add two getAllVendor() and getById() inside the RestaurantVendor.java" />
+    <MESSAGE value="Many changes did in NotificationServiceApplication.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Many changes did in NotificationServiceApplication.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
