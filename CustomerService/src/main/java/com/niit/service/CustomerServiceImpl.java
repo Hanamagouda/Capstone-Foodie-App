@@ -105,16 +105,29 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
+    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         if (customerRepo.findById(emailId).isEmpty()) {
             throw new CustomerNotFoundException();
         }
         Customer customer = customerRepo.findById(emailId).get();
-        if (!(customer.getFavorite().get(0).getRestaurantId().equals(restaurantId))) {
-            throw new RestaurantNotFoundException();
-        } else {
-            customer.getFavorite().removeIf(restro -> restro.getRestaurantId().equals(restaurantId));
+        boolean found = false;
+        for (Restaurant restaurant : customer.getFavorite()) {
+            if (restaurant.getRestaurantId().equals(restaurantId)) {
+                customer.getFavorite().remove(restaurant);
+                customerRepo.save(customer);
+                found = true;
+                break;
+            }
         }
-        return customerRepo.save(customer);
+        if (!found) {
+            throw new RestaurantNotFoundException();
+        }
+        return customer.getFavorite();
     }
+
+
+
+
+
+
 }

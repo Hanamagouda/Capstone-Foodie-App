@@ -111,7 +111,63 @@ public class VendorController {
                 return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<>("Error Occurred while trying to delete specific cuisine", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Error Occurred while trying to delete specific cuisine", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/updateRestro/{vendorId}/{restaurantId}")
+    public ResponseEntity<?> updateRestaurant(@PathVariable String vendorId, @PathVariable String restaurantId, @RequestBody Restaurant restaurant) {
+        try {
+            Restaurant updatedRestaurant = vendorService.updateRestaurant(vendorId, restaurantId, restaurant);
+            if (updatedRestaurant == null) {
+                throw new VendorNotFoundException();
+            } else {
+                return new ResponseEntity<Restaurant>(updatedRestaurant, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to update restaurant", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/updateCuisine/{vendorId}/{restaurantId}/{cuisineId}")
+    public ResponseEntity<?> updateCuisine(@PathVariable String vendorId, @PathVariable String restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
+        try {
+            List<Cuisine> cuisines = vendorService.updateCuisine(vendorId, restaurantId, cuisineId, cuisine);
+            if (cuisines == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to update cuisine", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/getAllVendors")
+    public ResponseEntity<?> getAllVendors() {
+        try {
+            List<Vendor> allVendors = vendorService.getAllVendors();
+            if (allVendors == null) {
+                throw new VendorNotFoundException();
+            } else {
+                return new ResponseEntity<List<Vendor>>(allVendors, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to get vendors", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/vendorById/{vendorId}")
+    public ResponseEntity<?> getvendorById(@PathVariable String vendorId) {
+        try {
+            Vendor byId = vendorService.getById(vendorId);
+            if (byId == null) {
+                throw new VendorNotFoundException();
+            } else {
+                return new ResponseEntity<Vendor>(byId, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to fetch vendor by id", HttpStatus.BAD_REQUEST);
         }
     }
 }

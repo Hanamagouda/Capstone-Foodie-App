@@ -30,6 +30,10 @@ public class AppConfig {
                         .uri("http://localhost:8084"))
                 .route(p -> p.path("/order/**")
                         .uri("http://localhost:8085"))
+                .route(p -> p.path("/notification/**")
+                        .uri("http://localhost:8086"))
+                .route(p -> p.path("/vendor/**")
+                        .uri("http://localhost:8087"))
                 .build();
     }
 }

@@ -71,7 +71,7 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/user/allRestro/{emailId}")
+    @GetMapping("/allRestro/{emailId}")
     public ResponseEntity<?> getFavoriteRestaurants(@PathVariable String emailId) {
         try {
             List<Restaurant> favoriteRestaurants = customerService.getFavoriteRestaurants(emailId);
@@ -88,11 +88,11 @@ public class CustomerController {
     @DeleteMapping("/deleteRestro/{emailId}/{restaurantId}")
     public ResponseEntity<?> deleteRestaurantFromFavorite(@PathVariable String emailId, @PathVariable String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         try {
-            Customer customer = customerService.deleteRestaurantFromFavorite(emailId, restaurantId);
-            if (customer == null) {
+            List<Restaurant> restaurants = customerService.deleteRestaurantFromFavorite(emailId, restaurantId);
+            if (restaurants == null) {
                 throw new CustomerNotFoundException();
             } else {
-                return new ResponseEntity<Customer>(customer, HttpStatus.OK);
+                return new ResponseEntity<List<Restaurant>>(restaurants, HttpStatus.OK);
             }
         } catch (Exception exception) {
             return new ResponseEntity<>("Error Occurred while trying to delete specific restaurant from favorite", HttpStatus.BAD_REQUEST);

@@ -103,4 +103,66 @@ public class RestaurantServiceImpl implements RestaurantService {
         ResponseEntity<?> responseEntity = orderProxy.saveCuisineToOrder(orderId, cuisine);
         return cuisine;
     }
+
+    @Override
+    public List<Cuisine> updateCuisine(String restaurantId, int cuisineId, Cuisine cuisine) throws RestaurantNotFoundException, CuisineNotFoundException {
+        if (restaurantRepo.findById(restaurantId).isEmpty()) {
+            throw new RestaurantNotFoundException();
+        }
+        Restaurant restaurant = restaurantRepo.findById(restaurantId).get();
+        if (restaurant.getCuisineList().iterator().next().getCuisineId() != cuisineId) {
+            throw new CuisineNotFoundException();
+        } else {
+            restaurant.getCuisineList().iterator().next().setCuisineName(cuisine.getCuisineName());
+            restaurant.getCuisineList().iterator().next().setCuisinePrice(cuisine.getCuisinePrice());
+            restaurant.getCuisineList().iterator().next().setDescription(cuisine.getDescription());
+            restaurant.getCuisineList().iterator().next().setCuisineImage(cuisine.getCuisineImage());
+            restaurantRepo.save(restaurant);
+        }
+        return restaurant.getCuisineList();
+    }
+
+    @Override
+    public Restaurant updateRestaurant(String restaurantId, Restaurant restaurant) throws RestaurantNotFoundException {
+        if (restaurantRepo.findById(restaurantId).isEmpty()) {
+            throw new RestaurantNotFoundException();
+        }
+        Restaurant restaurantById = restaurantRepo.findById(restaurantId).get();
+        restaurantById.setRestaurantName(restaurant.getRestaurantName());
+        restaurantById.setRestaurantLocation(restaurant.getRestaurantLocation());
+        restaurantById.setRestaurantImage(restaurant.getRestaurantImage());
+
+        Restaurant save = restaurantRepo.save(restaurantById);
+        return save;
+    }
+
+    @Override
+    public List<Cuisine> deleteCuisine(String restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
+        if (restaurantRepo.findById(restaurantId).isEmpty()) {
+            throw new RestaurantNotFoundException();
+        }
+        Restaurant restaurant = restaurantRepo.findById(restaurantId).get();
+        boolean found = false;
+
+        for (Cuisine cuisine : restaurant.getCuisineList()) {
+            if (cuisine.getCuisineId() == (cuisineId)) {
+                restaurant.getCuisineList().remove(cuisine);
+                restaurantRepo.save(restaurant);
+                found = true;
+            }
+        }
+        if (!found) {
+            throw new CuisineNotFoundException();
+        }
+        return restaurant.getCuisineList();
+    }
+
+    @Override
+    public List<Restaurant> deleteRestaurant(String restaurantId) throws RestaurantNotFoundException {
+        if (restaurantRepo.findById(restaurantId).isEmpty()) {
+            throw new RestaurantNotFoundException();
+        }
+        restaurantRepo.deleteById(restaurantId);
+        return restaurantRepo.findAll();
+    }
 }

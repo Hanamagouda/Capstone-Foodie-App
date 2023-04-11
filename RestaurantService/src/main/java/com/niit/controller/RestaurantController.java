@@ -116,15 +116,71 @@ public class RestaurantController {
 
     @PostMapping("/addCuisineToOrder/{orderId}")
     public ResponseEntity<?> addCuisineToOrder(@PathVariable String orderId, @RequestBody Cuisine cuisine) throws CuisineNotFoundException {
-        //  try {
-        Cuisine cuisineToOrder = restaurantService.addCuisineToOrder(orderId, cuisine);
-        if (cuisineToOrder == null) {
+        try {
+            Cuisine cuisineToOrder = restaurantService.addCuisineToOrder(orderId, cuisine);
+            if (cuisineToOrder == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<Cuisine>(cuisineToOrder, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to add cuisine to order", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/updateCuisine/{restaurantId}/{cuisineId}")
+    public ResponseEntity<?> updateCuisine(@PathVariable String restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
+        try {
+            List<Cuisine> cuisines = restaurantService.updateCuisine(restaurantId, cuisineId, cuisine);
+            if (cuisines == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to update cuisine list", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/updateRestro/{restaurantId}")
+    public ResponseEntity<?> updateRestaurant(@PathVariable String restaurantId, @RequestBody Restaurant restaurant) {
+        try {
+            Restaurant updatedRestro = restaurantService.updateRestaurant(restaurantId, restaurant);
+            if (updatedRestro == null) {
+                throw new RestaurantNotFoundException();
+            } else {
+                return new ResponseEntity<Restaurant>(updatedRestro, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<>("Error Occurred while trying to update restaurant", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @DeleteMapping("/deleteCuisine/{restaurantId}/{cuisineId}")
+    public ResponseEntity<?> deleteCuisine(@PathVariable String restaurantId, @PathVariable int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
+        //  try{
+        List<Cuisine> cuisines = restaurantService.deleteCuisine(restaurantId, cuisineId);
+        if (cuisines == null) {
             throw new CuisineNotFoundException();
         } else {
-            return new ResponseEntity<Cuisine>(cuisineToOrder, HttpStatus.OK);
+            return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
         }
-//        } catch (Exception exception) {
-//            return new ResponseEntity<String>("Error Occurred while trying to add cuisine to order", HttpStatus.BAD_REQUEST);
+//        }catch (Exception exception){
+//            return new ResponseEntity<String >("Error Occurred while trying to delete cuisine",HttpStatus.BAD_REQUEST);
 //        }
+    }
+
+    @DeleteMapping("/deleteRestaurant/{restaurantId}")
+    public ResponseEntity<?> deleteRestaurant(@PathVariable String restaurantId) {
+        try {
+            List<Restaurant> restaurants = restaurantService.deleteRestaurant(restaurantId);
+            if (restaurants == null) {
+                throw new RestaurantNotFoundException();
+            } else {
+                return new ResponseEntity<List<Restaurant>>(restaurants, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to delete restaurant", HttpStatus.BAD_REQUEST);
+        }
     }
 }

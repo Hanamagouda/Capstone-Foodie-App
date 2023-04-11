@@ -44,7 +44,8 @@ public class VendorServiceImpl implements VendorService {
         if (vendor.getRestaurant() == null) {
             vendor.setRestaurant(restaurant);
         }
-        return vendor;
+        Vendor save = vendorRepo.save(vendor);
+        return save;
     }
 
     @Override
@@ -96,29 +97,26 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public List<Cuisine> deleteCuisine(String vendorId, String restaurantId, int cuisineId) throws VendorNotFoundException {
+    public List<Cuisine> deleteCuisine(String vendorId, String restaurantId, int cuisineId) throws VendorNotFoundException, CuisineNotFoundException {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
         Vendor vendor = vendorRepo.findById(vendorId).get();
-        if (vendor.getRestaurant().getRestaurantId().equals(restaurantId)) {
-            vendor.getRestaurant().getCuisineList().removeIf(item -> item.getCuisineId() == cuisineId);
-            vendorRepo.save(vendor);
+        Restaurant restaurant = vendor.getRestaurant();
+        boolean found = false;
+
+        for (Cuisine cuisine : restaurant.getCuisineList()) {
+            if (cuisine.getCuisineId() == (cuisineId)) {
+                restaurant.getCuisineList().remove(cuisine);
+                vendorRepo.save(vendor);
+            }
         }
-        return vendor.getRestaurant().getCuisineList();
+        if (!found) {
+            throw new CuisineNotFoundException();
+        }
+        return restaurant.getCuisineList();
     }
 
-    @Override
-    public Vendor deleteRestaurant(String vendorId, String restaurantId) throws VendorNotFoundException {
-        if (vendorRepo.findById(vendorId).isEmpty()) {
-            throw new VendorNotFoundException();
-        }
-        Vendor vendor = vendorRepo.findById(vendorId).get();
-//        if(vendor.getRestaurant().getRestaurantId().equals(restaurantId)){
-//
-//        }
-        return null;
-    }
 
     @Override
     public Restaurant updateRestaurant(String vendorId, String restaurantId, Restaurant restaurant) throws VendorNotFoundException {
@@ -152,5 +150,22 @@ public class VendorServiceImpl implements VendorService {
             }
         }
         return vendor.getRestaurant().getCuisineList();
+    }
+
+    @Override
+    public List<Vendor> getAllVendors() throws VendorNotFoundException {
+        if (vendorRepo.findAll().isEmpty()) {
+            throw new VendorNotFoundException();
+        }
+        return vendorRepo.findAll();
+    }
+
+    @Override
+    public Vendor getById(String vendorId) throws VendorNotFoundException {
+        if (vendorRepo.findById(vendorId).isEmpty()) {
+            throw new VendorNotFoundException();
+        }
+        Vendor vendor = vendorRepo.findById(vendorId).get();
+        return vendor;
     }
 }

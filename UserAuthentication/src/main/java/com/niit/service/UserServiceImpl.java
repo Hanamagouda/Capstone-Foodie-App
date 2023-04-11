@@ -16,7 +16,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+
     private UserRepository userRepository;
+
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository) {
@@ -40,7 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     * This method is to login from User details.
+     * This method is to log in from User details.
      *
      * @param user - It will take user details as argument.
      * @return - It return user type.

@@ -20,11 +20,13 @@ public interface VendorService {
     public List<Cuisine> getAllCuisine(String vendorId, String restaurantId) throws VendorNotFoundException, CuisineNotFoundException, RestaurantNotFoundException;
 
 
-    public List<Cuisine> deleteCuisine(String vendorId, String restaurantId, int cuisineId) throws VendorNotFoundException;
-
-    public Vendor deleteRestaurant(String vendorId, String restaurantId) throws VendorNotFoundException;
+    public List<Cuisine> deleteCuisine(String vendorId, String restaurantId, int cuisineId) throws VendorNotFoundException, CuisineNotFoundException;
 
     public Restaurant updateRestaurant(String vendorId, String restaurantId, Restaurant restaurant) throws VendorNotFoundException;
 
     public List<Cuisine> updateCuisine(String vendorId, String restaurantId, int cuisineId, Cuisine cuisine) throws VendorNotFoundException;
+
+    public List<Vendor> getAllVendors() throws VendorNotFoundException;
+
+    public Vendor getById(String vendorId) throws VendorNotFoundException;
 }
