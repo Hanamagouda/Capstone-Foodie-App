@@ -20,13 +20,8 @@ import java.util.List;
 @ToString
 public class Order {
     @Id
-    private String emailId;
     private String orderId;
     private int quantity;
     private double price;
     private List<Cuisine> orderedItems;
-    private String to;
-    private String subject;
-    private String body;
-
 }

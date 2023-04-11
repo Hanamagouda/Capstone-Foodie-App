@@ -29,10 +29,10 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @PostMapping("/addOrder")
-    public ResponseEntity<?> addOrder(@RequestBody Order order) {
+    @PostMapping("/addOrder/{emailId}")
+    public ResponseEntity<?> addOrder(@RequestBody Order order, @PathVariable String emailId) {
         try {
-            Order orderAdded = orderService.addOrder(order);
+            Order orderAdded = orderService.addOrder(order, emailId);
             if (orderAdded == null) {
                 throw new OrderAlreadyExistsException();
             } else {

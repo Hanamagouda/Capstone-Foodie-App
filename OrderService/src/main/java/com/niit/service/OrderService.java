@@ -9,7 +9,7 @@ import com.niit.exception.OrderNotFoundException;
 import java.util.List;
 
 public interface OrderService {
-    public Order addOrder(Order order) throws OrderAlreadyExistsException;
+    public Order addOrder(Order order, String emailId) throws OrderAlreadyExistsException;
 
     public List<Order> deleteOrder(String orderId) throws OrderNotFoundException;
 
