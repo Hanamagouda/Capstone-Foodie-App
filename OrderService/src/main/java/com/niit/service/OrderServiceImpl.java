@@ -35,13 +35,15 @@ public class OrderServiceImpl implements OrderService {
     private DirectExchange exchange;
     private RabbitTemplate template;
 
+    private SequenceGeneratorService generatorService;
+
     @Autowired
-    public OrderServiceImpl(OrderRepository orderRepository, JavaMailSender javaMailSender, String sender, DirectExchange exchange, RabbitTemplate template) {
+    public OrderServiceImpl(OrderRepository orderRepository, JavaMailSender javaMailSender, DirectExchange exchange, RabbitTemplate template, SequenceGeneratorService generatorService) {
         this.orderRepository = orderRepository;
         this.javaMailSender = javaMailSender;
-        this.sender = sender;
         this.exchange = exchange;
         this.template = template;
+        this.generatorService = generatorService;
     }
 
     @Override
@@ -49,11 +51,13 @@ public class OrderServiceImpl implements OrderService {
         if (orderRepository.findById(order.getOrderId()).isPresent()) {
             throw new OrderAlreadyExistsException();
         }
+        order.setOrderId(generatorService.getSequenceNumber(order.getSEQUENCE_NAME()));
+
         OrderDTO orderDTO = new OrderDTO();
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("OrderId : ", order.getOrderId());
-        jsonObject.put("EmailId : ", emailId);
-        jsonObject.put("Quantity : ", order.getQuantity());
+        jsonObject.put("orderId : ", order.getOrderId());
+        jsonObject.put("emailId", emailId);
+        jsonObject.put("quantity : ", order.getQuantity());
         jsonObject.put("Price : ", order.getPrice());
         jsonObject.put("Ordered Items : ", order.getOrderedItems());
         orderDTO.setJsonObject(jsonObject);
@@ -68,7 +72,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> deleteOrder(String orderId) throws OrderNotFoundException {
+    public List<Order> deleteOrder(int orderId) throws OrderNotFoundException {
         if (orderRepository.findById(orderId).isEmpty()) {
             throw new OrderNotFoundException();
         }
@@ -78,7 +82,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Cuisine> addCuisineToOrder(String orderId, Cuisine cuisine) throws OrderNotFoundException, CuisineAlreadyExistException {
+    public List<Cuisine> addCuisineToOrder(int orderId, Cuisine cuisine) throws OrderNotFoundException, CuisineAlreadyExistException {
         if (orderRepository.findById(orderId).isEmpty()) {
             throw new OrderNotFoundException();
         }
@@ -104,7 +108,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Cuisine> deleteFromOrder(String orderId, int cuisineId) throws OrderNotFoundException {
+    public List<Cuisine> deleteFromOrder(int orderId, int cuisineId) throws OrderNotFoundException {
         Order order = orderRepository.findById(orderId).get();
         if (order == null) {
             throw new OrderNotFoundException();

@@ -30,21 +30,21 @@ public class OrderController {
     }
 
     @PostMapping("/addOrder/{emailId}")
-    public ResponseEntity<?> addOrder(@RequestBody Order order, @PathVariable String emailId) {
-        try {
-            Order orderAdded = orderService.addOrder(order, emailId);
-            if (orderAdded == null) {
-                throw new OrderAlreadyExistsException();
-            } else {
-                return new ResponseEntity<Order>(orderAdded, HttpStatus.OK);
-            }
-        } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to add order", HttpStatus.BAD_REQUEST);
+    public ResponseEntity<?> addOrder(@RequestBody Order order, @PathVariable String emailId) throws OrderAlreadyExistsException {
+        // try {
+        Order orderAdded = orderService.addOrder(order, emailId);
+        if (orderAdded == null) {
+            throw new OrderAlreadyExistsException();
+        } else {
+            return new ResponseEntity<Order>(orderAdded, HttpStatus.OK);
         }
+//        } catch (Exception exception) {
+//            return new ResponseEntity<String>("Error Occurred while trying to add order", HttpStatus.BAD_REQUEST);
+//        }
     }
 
     @DeleteMapping("/delete/{orderId}")
-    public ResponseEntity<?> deleteOrder(@PathVariable String orderId) {
+    public ResponseEntity<?> deleteOrder(@PathVariable int orderId) {
         try {
             List<Order> orders = orderService.deleteOrder(orderId);
             if (orders == null) {
@@ -59,7 +59,7 @@ public class OrderController {
 
 
     @PostMapping("/addCuisineToOrder/{orderId}")
-    public ResponseEntity<?> addCuisineToOrder(@PathVariable String orderId, @RequestBody Cuisine cuisine) {
+    public ResponseEntity<?> addCuisineToOrder(@PathVariable int orderId, @RequestBody Cuisine cuisine) {
         try {
             List<Cuisine> cuisines = orderService.addCuisineToOrder(orderId, cuisine);
             if (cuisines == null) {
@@ -87,7 +87,7 @@ public class OrderController {
     }
 
     @DeleteMapping("/deleteFromOrder/{orderId}/{cuisineId}")
-    public ResponseEntity<?> deleteOrderFrom(@PathVariable String orderId, @PathVariable int cuisineId) {
+    public ResponseEntity<?> deleteOrderFrom(@PathVariable int orderId, @PathVariable int cuisineId) {
         try {
             List<Cuisine> cuisines = orderService.deleteFromOrder(orderId, cuisineId);
             if (cuisines == null) {

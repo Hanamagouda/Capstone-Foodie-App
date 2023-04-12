@@ -33,6 +33,7 @@ public class OrderNotificationServiceImpl implements OrderNotificationService {
     public void saveNotification(OrderDTO orderDTO) {
         OrderNotification orderNotification = new OrderNotification();
         String emailId = (String) orderDTO.getJsonObject().get("emailId");
+        System.out.println(emailId);
         if (orderNotificationRepo.findById(emailId).isEmpty()) {
             orderNotification.setEmailId(emailId);
         }

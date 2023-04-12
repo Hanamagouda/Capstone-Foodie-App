@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "user-order-service", url = "localhost:8085")
 public interface OrderProxy {
     @PostMapping("/order/addCuisineToOrder/{orderId}")
-    public ResponseEntity<?> saveCuisineToOrder(@PathVariable String orderId, @RequestBody Cuisine cuisine);
+    public ResponseEntity<?> saveCuisineToOrder(@PathVariable int orderId, @RequestBody Cuisine cuisine);
 }

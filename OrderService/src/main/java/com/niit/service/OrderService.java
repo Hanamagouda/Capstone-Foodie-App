@@ -11,12 +11,12 @@ import java.util.List;
 public interface OrderService {
     public Order addOrder(Order order, String emailId) throws OrderAlreadyExistsException;
 
-    public List<Order> deleteOrder(String orderId) throws OrderNotFoundException;
+    public List<Order> deleteOrder(int orderId) throws OrderNotFoundException;
 
-    public List<Cuisine> addCuisineToOrder(String orderId, Cuisine cuisine) throws OrderNotFoundException, CuisineAlreadyExistException;
+    public List<Cuisine> addCuisineToOrder(int orderId, Cuisine cuisine) throws OrderNotFoundException, CuisineAlreadyExistException;
 
     public List<Order> getOrder() throws OrderNotFoundException;
 
-    public List<Cuisine> deleteFromOrder(String orderId, int cuisineId) throws OrderNotFoundException;
+    public List<Cuisine> deleteFromOrder(int orderId, int cuisineId) throws OrderNotFoundException;
 
 }

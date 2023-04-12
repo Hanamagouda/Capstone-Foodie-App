@@ -8,6 +8,7 @@ package com.niit.domain;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
@@ -19,8 +20,10 @@ import java.util.List;
 @Setter
 @ToString
 public class Order {
+    @Transient
+    private String SEQUENCE_NAME = "order_sequence";
     @Id
-    private String orderId;
+    private int orderId;
     private int quantity;
     private double price;
     private List<Cuisine> orderedItems;

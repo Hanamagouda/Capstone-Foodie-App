@@ -115,7 +115,7 @@ public class RestaurantController {
     }
 
     @PostMapping("/addCuisineToOrder/{orderId}")
-    public ResponseEntity<?> addCuisineToOrder(@PathVariable String orderId, @RequestBody Cuisine cuisine) throws CuisineNotFoundException {
+    public ResponseEntity<?> addCuisineToOrder(@PathVariable int orderId, @RequestBody Cuisine cuisine) throws CuisineNotFoundException {
         try {
             Cuisine cuisineToOrder = restaurantService.addCuisineToOrder(orderId, cuisine);
             if (cuisineToOrder == null) {

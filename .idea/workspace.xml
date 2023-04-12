@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/MessageConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderNotification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderNotificationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/Producer.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/DbSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/SequenceGeneratorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAuthentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,24 +61,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ahmed/OneDrive/Desktop/Capstone Project/OrderService"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmed/OneDrive/Desktop/Capstone Project/NotificationService&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java" />
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RestaurantVendorApplication">
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.ApiGatewayApplication" />
-      <module name="APIGateway" />
+  <component name="RunManager" selected="Application.NotificationServiceApplication">
+    <configuration name="NotificationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.NotificationServiceApplication" />
+      <module name="NotificationService" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.niit.*" />
@@ -81,9 +89,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.CustomerServiceApplication" />
-      <module name="CustomerService" />
+    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.OrderServiceApplication" />
+      <module name="OrderService" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.niit.*" />
@@ -135,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RestaurantVendorApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.RestaurantServiceApplication" />
+        <item itemvalue="Application.NotificationServiceApplication" />
+        <item itemvalue="Application.RestaurantVendorApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -151,20 +159,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Created two more exception class inside the CustomerService.">
-      <created>1680235306366</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1680235306366</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Created CustomerService interface inside the service package in CustomerService.java">
-      <created>1680236067499</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1680236067500</updated>
     </task>
     <task id="LOCAL-00014" summary="Created proxy interface inside the CustomerService.java">
       <created>1680236623901</created>
@@ -495,15 +489,27 @@
       <option name="project" value="LOCAL" />
       <updated>1681203369381</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Created MessageConfiguration.java and OrderDTO.java inside the config package in OrderServiceImpl.java">
+      <created>1681204497475</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1681204497484</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Comment Out some lines inside the application.properties">
+      <created>1681204558972</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1681204558972</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created Order Service and add required dependency in pom.xml" />
-    <MESSAGE value="Created OrderController.java inside the OrderService" />
     <MESSAGE value="Written application.properties inside the OrderService" />
     <MESSAGE value="Created order proxy in RestaurantService.java" />
     <MESSAGE value="Add Jwt filter in RestaurantServiceApplication.java" />
@@ -527,7 +533,9 @@
     <MESSAGE value="Re-written RestaurantVendor Service and inside the CustomerServiceImpl.java changed the delete() logic." />
     <MESSAGE value="Add two getAllVendor() and getById() inside the RestaurantVendor.java" />
     <MESSAGE value="Many changes did in NotificationServiceApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Many changes did in NotificationServiceApplication.java" />
+    <MESSAGE value="Created MessageConfiguration.java and OrderDTO.java inside the config package in OrderServiceImpl.java" />
+    <MESSAGE value="Comment Out some lines inside the application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment Out some lines inside the application.properties" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

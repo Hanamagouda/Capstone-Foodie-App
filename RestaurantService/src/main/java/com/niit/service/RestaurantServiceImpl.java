@@ -99,7 +99,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public Cuisine addCuisineToOrder(String orderId, Cuisine cuisine) {
+    public Cuisine addCuisineToOrder(int orderId, Cuisine cuisine) {
         ResponseEntity<?> responseEntity = orderProxy.saveCuisineToOrder(orderId, cuisine);
         return cuisine;
     }

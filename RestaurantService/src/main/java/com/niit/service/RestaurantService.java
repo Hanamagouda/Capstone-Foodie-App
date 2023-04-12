@@ -29,7 +29,7 @@ public interface RestaurantService {
 
     public List<Restaurant> restaurantSearchByLocation(String restaurantLocation) throws RestaurantNotFoundException;
 
-    public Cuisine addCuisineToOrder(String orderId, Cuisine cuisine);
+    public Cuisine addCuisineToOrder(int orderId, Cuisine cuisine);
 
     public List<Cuisine> updateCuisine(String restaurantId, int cuisineId, Cuisine ciusine) throws RestaurantNotFoundException, CuisineNotFoundException;
 

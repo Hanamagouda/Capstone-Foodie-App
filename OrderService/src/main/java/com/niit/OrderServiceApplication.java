@@ -21,7 +21,7 @@ public class OrderServiceApplication {
     public FilterRegistrationBean filterUrl() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(new JwtFilter());
-        filterRegistrationBean.addUrlPatterns("/order/user/*");
+        filterRegistrationBean.addUrlPatterns("/order/*");
         return filterRegistrationBean;
     }
 }
