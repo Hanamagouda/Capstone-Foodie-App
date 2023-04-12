@@ -21,9 +21,9 @@ public interface RestaurantService {
 
     public List<Restaurant> getAllRestaurant() throws RestaurantNotFoundException;
 
-    public Restaurant addCuisine(String restaurantId, Cuisine cuisine) throws CuisineAlreadyExistsException, RestaurantNotFoundException;
+    public Restaurant addCuisine(int restaurantId, Cuisine cuisine) throws CuisineAlreadyExistsException, RestaurantNotFoundException;
 
-    public List<Cuisine> getAllCuisine(String restaurantId) throws CuisineNotFoundException, RestaurantNotFoundException;
+    public List<Cuisine> getAllCuisine(int restaurantId) throws CuisineNotFoundException, RestaurantNotFoundException;
 
     public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant);
 
@@ -31,11 +31,11 @@ public interface RestaurantService {
 
     public Cuisine addCuisineToOrder(int orderId, Cuisine cuisine);
 
-    public List<Cuisine> updateCuisine(String restaurantId, int cuisineId, Cuisine ciusine) throws RestaurantNotFoundException, CuisineNotFoundException;
+    public List<Cuisine> updateCuisine(int restaurantId, int cuisineId, Cuisine ciusine) throws RestaurantNotFoundException, CuisineNotFoundException;
 
-    public Restaurant updateRestaurant(String restaurantId, Restaurant restaurant) throws RestaurantNotFoundException;
+    public Restaurant updateRestaurant(int restaurantId, Restaurant restaurant) throws RestaurantNotFoundException;
 
-    public List<Cuisine> deleteCuisine(String restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException;
+    public List<Cuisine> deleteCuisine(int restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException;
 
-    public List<Restaurant> deleteRestaurant(String restaurantId) throws RestaurantNotFoundException;
+    public List<Restaurant> deleteRestaurant(int restaurantId) throws RestaurantNotFoundException;
 }

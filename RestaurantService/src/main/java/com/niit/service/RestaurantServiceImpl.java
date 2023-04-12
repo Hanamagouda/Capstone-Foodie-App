@@ -57,7 +57,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public Restaurant addCuisine(String restaurantId, Cuisine cuisine) throws CuisineAlreadyExistsException, RestaurantNotFoundException {
+    public Restaurant addCuisine(int restaurantId, Cuisine cuisine) throws CuisineAlreadyExistsException, RestaurantNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
@@ -73,7 +73,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Cuisine> getAllCuisine(String restaurantId) throws CuisineNotFoundException, RestaurantNotFoundException {
+    public List<Cuisine> getAllCuisine(int restaurantId) throws CuisineNotFoundException, RestaurantNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
@@ -105,7 +105,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Cuisine> updateCuisine(String restaurantId, int cuisineId, Cuisine cuisine) throws RestaurantNotFoundException, CuisineNotFoundException {
+    public List<Cuisine> updateCuisine(int restaurantId, int cuisineId, Cuisine cuisine) throws RestaurantNotFoundException, CuisineNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
@@ -123,7 +123,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public Restaurant updateRestaurant(String restaurantId, Restaurant restaurant) throws RestaurantNotFoundException {
+    public Restaurant updateRestaurant(int restaurantId, Restaurant restaurant) throws RestaurantNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
@@ -137,7 +137,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Cuisine> deleteCuisine(String restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
+    public List<Cuisine> deleteCuisine(int restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
@@ -158,7 +158,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Restaurant> deleteRestaurant(String restaurantId) throws RestaurantNotFoundException {
+    public List<Restaurant> deleteRestaurant(int restaurantId) throws RestaurantNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }

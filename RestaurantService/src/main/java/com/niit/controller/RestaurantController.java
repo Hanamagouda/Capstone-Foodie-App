@@ -59,7 +59,7 @@ public class RestaurantController {
     }
 
     @PostMapping("/addCuisine/{restaurantId}")
-    public ResponseEntity<?> addCuisine(@PathVariable String restaurantId, @RequestBody Cuisine cuisine) {
+    public ResponseEntity<?> addCuisine(@PathVariable int restaurantId, @RequestBody Cuisine cuisine) {
         try {
             Restaurant restaurant = restaurantService.addCuisine(restaurantId, cuisine);
             if (restaurant == null) {
@@ -73,7 +73,7 @@ public class RestaurantController {
     }
 
     @GetMapping("/allCuisine/{restaurantId}")
-    public ResponseEntity<?> getAllCuisine(@PathVariable String restaurantId) {
+    public ResponseEntity<?> getAllCuisine(@PathVariable int restaurantId) {
         try {
             List<Cuisine> allCuisine = restaurantService.getAllCuisine(restaurantId);
             if (allCuisine == null) {
@@ -129,7 +129,7 @@ public class RestaurantController {
     }
 
     @PutMapping("/updateCuisine/{restaurantId}/{cuisineId}")
-    public ResponseEntity<?> updateCuisine(@PathVariable String restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
+    public ResponseEntity<?> updateCuisine(@PathVariable int restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
         try {
             List<Cuisine> cuisines = restaurantService.updateCuisine(restaurantId, cuisineId, cuisine);
             if (cuisines == null) {
@@ -143,7 +143,7 @@ public class RestaurantController {
     }
 
     @PutMapping("/updateRestro/{restaurantId}")
-    public ResponseEntity<?> updateRestaurant(@PathVariable String restaurantId, @RequestBody Restaurant restaurant) {
+    public ResponseEntity<?> updateRestaurant(@PathVariable int restaurantId, @RequestBody Restaurant restaurant) {
         try {
             Restaurant updatedRestro = restaurantService.updateRestaurant(restaurantId, restaurant);
             if (updatedRestro == null) {
@@ -157,7 +157,7 @@ public class RestaurantController {
     }
 
     @DeleteMapping("/deleteCuisine/{restaurantId}/{cuisineId}")
-    public ResponseEntity<?> deleteCuisine(@PathVariable String restaurantId, @PathVariable int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
+    public ResponseEntity<?> deleteCuisine(@PathVariable int restaurantId, @PathVariable int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
         //  try{
         List<Cuisine> cuisines = restaurantService.deleteCuisine(restaurantId, cuisineId);
         if (cuisines == null) {
@@ -171,7 +171,7 @@ public class RestaurantController {
     }
 
     @DeleteMapping("/deleteRestaurant/{restaurantId}")
-    public ResponseEntity<?> deleteRestaurant(@PathVariable String restaurantId) {
+    public ResponseEntity<?> deleteRestaurant(@PathVariable int restaurantId) {
         try {
             List<Restaurant> restaurants = restaurantService.deleteRestaurant(restaurantId);
             if (restaurants == null) {

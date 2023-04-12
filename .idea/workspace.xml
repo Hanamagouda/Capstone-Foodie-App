@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/DbSequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/SequenceGeneratorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAuthentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserAuthentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/controller/VendorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/controller/VendorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/VendorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/VendorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/VendorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/VendorServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Created proxy interface inside the CustomerService.java">
-      <created>1680236623901</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1680236623901</updated>
     </task>
     <task id="LOCAL-00015" summary="Written addFavoriteRestaurant and register customer logic inside the serviceImpl class.">
       <created>1680238228407</created>
@@ -503,14 +482,20 @@
       <option name="project" value="LOCAL" />
       <updated>1681204558972</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Created One domain DbSequence and one service SequenceGeneratorService.java for auto-generated orderId and inside the SequenceGeneratorService.java written getSequenceNumber() this all the things written inside the OrderServiceApplication.java">
+      <created>1681261457833</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1681261457834</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Written application.properties inside the OrderService" />
     <MESSAGE value="Created order proxy in RestaurantService.java" />
     <MESSAGE value="Add Jwt filter in RestaurantServiceApplication.java" />
     <MESSAGE value="Add Jwt filter in OrderServiceApplication.java" />
@@ -535,7 +520,8 @@
     <MESSAGE value="Many changes did in NotificationServiceApplication.java" />
     <MESSAGE value="Created MessageConfiguration.java and OrderDTO.java inside the config package in OrderServiceImpl.java" />
     <MESSAGE value="Comment Out some lines inside the application.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment Out some lines inside the application.properties" />
+    <MESSAGE value="Created One domain DbSequence and one service SequenceGeneratorService.java for auto-generated orderId and inside the SequenceGeneratorService.java written getSequenceNumber() this all the things written inside the OrderServiceApplication.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created One domain DbSequence and one service SequenceGeneratorService.java for auto-generated orderId and inside the SequenceGeneratorService.java written getSequenceNumber() this all the things written inside the OrderServiceApplication.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
