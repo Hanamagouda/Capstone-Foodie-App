@@ -20,5 +20,5 @@ public interface CustomerService {
 
     public Customer updateCustomer(String emailId, Customer customer) throws CustomerNotFoundException;
 
-    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException;
+    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, int restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException;
 }

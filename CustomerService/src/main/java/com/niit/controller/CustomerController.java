@@ -86,7 +86,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/deleteRestro/{emailId}/{restaurantId}")
-    public ResponseEntity<?> deleteRestaurantFromFavorite(@PathVariable String emailId, @PathVariable String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
+    public ResponseEntity<?> deleteRestaurantFromFavorite(@PathVariable String emailId, @PathVariable int restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         try {
             List<Restaurant> restaurants = customerService.deleteRestaurantFromFavorite(emailId, restaurantId);
             if (restaurants == null) {

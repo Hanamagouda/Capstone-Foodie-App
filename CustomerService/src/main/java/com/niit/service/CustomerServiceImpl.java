@@ -63,7 +63,7 @@ public class CustomerServiceImpl implements CustomerService {
         } else if (customer.getFavorite().contains(restaurant)) {
             throw new RestaurantAlreadyExistsException();
         } else {
-            customer.getFavorite().removeIf(restro -> restro.getRestaurantId().equals(restaurant.getRestaurantId()));
+            customer.getFavorite().removeIf(restro -> restro.getRestaurantId() == (restaurant.getRestaurantId()));
             customer.getFavorite().add(restaurant);
         }
         return customerRepo.save(customer);
@@ -105,14 +105,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, String restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
+    public List<Restaurant> deleteRestaurantFromFavorite(String emailId, int restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         if (customerRepo.findById(emailId).isEmpty()) {
             throw new CustomerNotFoundException();
         }
         Customer customer = customerRepo.findById(emailId).get();
         boolean found = false;
         for (Restaurant restaurant : customer.getFavorite()) {
-            if (restaurant.getRestaurantId().equals(restaurantId)) {
+            if (restaurant.getRestaurantId() == (restaurantId)) {
                 customer.getFavorite().remove(restaurant);
                 customerRepo.save(customer);
                 found = true;
