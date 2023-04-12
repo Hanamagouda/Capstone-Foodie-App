@@ -46,6 +46,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         if (restaurantRepo.findById(restaurant.getRestaurantId()).isPresent()) {
             throw new RestaurantAlreadyExistsException();
         }
+        restaurant.setRestaurantId(generatorService.getSequenceNumber(restaurant.getSEQUENCE_NAME()));
         return restaurantRepo.save(restaurant);
     }
 

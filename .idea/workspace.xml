@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/SequenceGeneratorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,10 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.RestaurantServiceApplication" />
-        <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.RestaurantVendorApplication" />
+        <item itemvalue="Application.RestaurantServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
+        <item itemvalue="Application.NotificationServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -142,20 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Did Some changes inside the addCustomer and deleteRestaurant method in CustomerService.java">
-      <created>1680374128366</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1680374128366</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Created RestaurantServiceApplication.java microservice and added inside the foodie application as a child">
-      <created>1680375103344</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1680375103344</updated>
     </task>
     <task id="LOCAL-00021" summary="Created exceptions in RestaurantService.java">
       <created>1680495307829</created>
@@ -486,15 +474,27 @@
       <option name="project" value="LOCAL" />
       <updated>1681262501572</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Created one service SequenceGeneratorService.java inside the RestaurantService Application">
+      <created>1681262596684</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1681262596684</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Injected the SequenceGeneratorService inside the RestaurantServiceImpl.java and annotated with Autowired">
+      <created>1681262691117</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1681262691117</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created OrderNotification.java class inside the NotificationServiceApplication with all required instance variable." />
-    <MESSAGE value="Craeted MessageConfiguration.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created OrderDTO.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Refactor whole OrderDTO.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Added one more instance variable of type JsonObject in OrderNotification.java class inside the NotificationServiceApplication.java" />
@@ -518,7 +518,9 @@
     <MESSAGE value="In Restaurant Application change restaurantId datatype string to int." />
     <MESSAGE value="In CustomerService Application change restaurantId datatype string to int." />
     <MESSAGE value="Created one domain DbSequence.java inside the RestaurantService Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created one domain DbSequence.java inside the RestaurantService Application" />
+    <MESSAGE value="Created one service SequenceGeneratorService.java inside the RestaurantService Application" />
+    <MESSAGE value="Injected the SequenceGeneratorService inside the RestaurantServiceImpl.java and annotated with Autowired" />
+    <option name="LAST_COMMIT_MESSAGE" value="Injected the SequenceGeneratorService inside the RestaurantServiceImpl.java and annotated with Autowired" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
