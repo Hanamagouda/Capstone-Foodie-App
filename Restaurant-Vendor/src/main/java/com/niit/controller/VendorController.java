@@ -60,7 +60,7 @@ public class VendorController {
     }
 
     @PostMapping("/addCuisine/{vendorId}/{restaurantId}")
-    public ResponseEntity<?> addCuisine(@PathVariable String vendorId, @PathVariable String restaurantId, @RequestBody Cuisine cuisine) {
+    public ResponseEntity<?> addCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @RequestBody Cuisine cuisine) {
         try {
             Vendor vendor = vendorService.addCuisine(vendorId, restaurantId, cuisine);
             if (vendor == null) {
@@ -88,7 +88,7 @@ public class VendorController {
     }
 
     @GetMapping("/cuisines/{vendorId}/{restaurantId}")
-    public ResponseEntity<?> getAllCuisine(@PathVariable String vendorId, @PathVariable String restaurantId) {
+    public ResponseEntity<?> getAllCuisine(@PathVariable String vendorId, @PathVariable int restaurantId) {
         try {
             List<Cuisine> allCuisine = vendorService.getAllCuisine(vendorId, restaurantId);
             if (allCuisine == null) {
@@ -102,7 +102,7 @@ public class VendorController {
     }
 
     @DeleteMapping("/deleteCuisine/{vendorId}/{restaurantId}/{cuisineId}")
-    public ResponseEntity<?> deleteCuisine(@PathVariable String vendorId, @PathVariable String restaurantId, @PathVariable int cuisineId) {
+    public ResponseEntity<?> deleteCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId) {
         try {
             List<Cuisine> cuisines = vendorService.deleteCuisine(vendorId, restaurantId, cuisineId);
             if (cuisines == null) {
@@ -116,7 +116,7 @@ public class VendorController {
     }
 
     @PutMapping("/updateRestro/{vendorId}/{restaurantId}")
-    public ResponseEntity<?> updateRestaurant(@PathVariable String vendorId, @PathVariable String restaurantId, @RequestBody Restaurant restaurant) {
+    public ResponseEntity<?> updateRestaurant(@PathVariable String vendorId, @PathVariable int restaurantId, @RequestBody Restaurant restaurant) {
         try {
             Restaurant updatedRestaurant = vendorService.updateRestaurant(vendorId, restaurantId, restaurant);
             if (updatedRestaurant == null) {
@@ -130,7 +130,7 @@ public class VendorController {
     }
 
     @PutMapping("/updateCuisine/{vendorId}/{restaurantId}/{cuisineId}")
-    public ResponseEntity<?> updateCuisine(@PathVariable String vendorId, @PathVariable String restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
+    public ResponseEntity<?> updateCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
         try {
             List<Cuisine> cuisines = vendorService.updateCuisine(vendorId, restaurantId, cuisineId, cuisine);
             if (cuisines == null) {
@@ -158,7 +158,7 @@ public class VendorController {
     }
 
     @GetMapping("/vendorById/{vendorId}")
-    public ResponseEntity<?> getvendorById(@PathVariable String vendorId) {
+    public ResponseEntity<?> getVendorById(@PathVariable String vendorId) {
         try {
             Vendor byId = vendorService.getById(vendorId);
             if (byId == null) {

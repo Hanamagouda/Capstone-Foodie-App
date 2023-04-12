@@ -20,7 +20,7 @@ import java.util.List;
 @ToString
 public class Restaurant {
     @Id
-    private String restaurantId;
+    private int restaurantId;
     private String restaurantName;
     private String restaurantLocation;
     private String restaurantImage;

@@ -49,12 +49,12 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public Vendor addCuisine(String vendorId, String restaurantId, Cuisine cuisine) throws RestaurantNotFoundException, CuisineAlreadyExistsException, VendorNotFoundException {
+    public Vendor addCuisine(String vendorId, int restaurantId, Cuisine cuisine) throws RestaurantNotFoundException, CuisineAlreadyExistsException, VendorNotFoundException {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
         Vendor vendor = vendorRepo.findById(vendorId).get();
-        if (vendor.getRestaurant().getRestaurantId().equals(restaurantId)) {
+        if (vendor.getRestaurant().getRestaurantId() == restaurantId) {
             if (vendor.getRestaurant().getCuisineList() == null) {
                 vendor.getRestaurant().setCuisineList(Arrays.asList(cuisine));
             } else if (vendor.getRestaurant().getCuisineList().contains(cuisine)) {
@@ -80,12 +80,12 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public List<Cuisine> getAllCuisine(String vendorId, String restaurantId) throws VendorNotFoundException, CuisineNotFoundException, RestaurantNotFoundException {
+    public List<Cuisine> getAllCuisine(String vendorId, int restaurantId) throws VendorNotFoundException, CuisineNotFoundException, RestaurantNotFoundException {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
         Vendor vendor = vendorRepo.findById(vendorId).get();
-        if (vendor.getRestaurant().getRestaurantId().equals(restaurantId)) {
+        if (vendor.getRestaurant().getRestaurantId() == restaurantId) {
             if (vendor.getRestaurant().getCuisineList() == null) {
                 throw new CuisineNotFoundException();
             } else {
@@ -97,7 +97,7 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public List<Cuisine> deleteCuisine(String vendorId, String restaurantId, int cuisineId) throws VendorNotFoundException, CuisineNotFoundException {
+    public List<Cuisine> deleteCuisine(String vendorId, int restaurantId, int cuisineId) throws VendorNotFoundException, CuisineNotFoundException {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
@@ -119,12 +119,12 @@ public class VendorServiceImpl implements VendorService {
 
 
     @Override
-    public Restaurant updateRestaurant(String vendorId, String restaurantId, Restaurant restaurant) throws VendorNotFoundException {
+    public Restaurant updateRestaurant(String vendorId, int restaurantId, Restaurant restaurant) throws VendorNotFoundException {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
         Vendor vendor = vendorRepo.findById(vendorId).get();
-        if (vendor.getRestaurant().getRestaurantId().equals(restaurantId)) {
+        if (vendor.getRestaurant().getRestaurantId() == restaurantId) {
             vendor.getRestaurant().setRestaurantName(restaurant.getRestaurantName());
             vendor.getRestaurant().setRestaurantLocation(restaurant.getRestaurantLocation());
             vendor.getRestaurant().setRestaurantImage(restaurant.getRestaurantImage());
@@ -134,12 +134,12 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public List<Cuisine> updateCuisine(String vendorId, String restaurantId, int cuisineId, Cuisine cuisine) throws VendorNotFoundException {
+    public List<Cuisine> updateCuisine(String vendorId, int restaurantId, int cuisineId, Cuisine cuisine) throws VendorNotFoundException {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
         Vendor vendor = vendorRepo.findById(vendorId).get();
-        if (vendor.getRestaurant().getRestaurantId().equals(restaurantId)) {
+        if (vendor.getRestaurant().getRestaurantId() == restaurantId) {
             int cuisineById = vendor.getRestaurant().getCuisineList().iterator().next().getCuisineId();
             if (cuisineById == cuisineId) {
                 vendor.getRestaurant().getCuisineList().iterator().next().setCuisineName(cuisine.getCuisineName());
