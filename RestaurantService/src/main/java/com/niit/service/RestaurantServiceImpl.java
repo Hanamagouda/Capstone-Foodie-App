@@ -31,12 +31,14 @@ public class RestaurantServiceImpl implements RestaurantService {
     private RestaurantProxy restaurantProxy;
     private OrderProxy orderProxy;
 
+    private SequenceGeneratorService generatorService;
 
     @Autowired
-    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy, OrderProxy orderProxy) {
+    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy, OrderProxy orderProxy, SequenceGeneratorService generatorService) {
         this.restaurantRepo = restaurantRepo;
         this.restaurantProxy = restaurantProxy;
         this.orderProxy = orderProxy;
+        this.generatorService = generatorService;
     }
 
     @Override
