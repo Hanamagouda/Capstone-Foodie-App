@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderNotificationServiceImpl implements OrderNotificationService {
 
-    private OrderNotificationRepo orderNotificationRepo;
+    private final OrderNotificationRepo orderNotificationRepo;
 
     @Autowired
     public OrderNotificationServiceImpl(OrderNotificationRepo orderNotificationRepo) {
@@ -31,9 +31,9 @@ public class OrderNotificationServiceImpl implements OrderNotificationService {
     @RabbitListener(queues = "order-queue")
     @Override
     public void saveNotification(OrderDTO orderDTO) {
-        OrderNotification orderNotification = new OrderNotification();
         String emailId = (String) orderDTO.getJsonObject().get("emailId");
-        System.out.println(emailId);
+        System.out.println("EmailId : " + emailId);
+        OrderNotification orderNotification = new OrderNotification();
         if (orderNotificationRepo.findById(emailId).isEmpty()) {
             orderNotification.setEmailId(emailId);
         }
@@ -41,4 +41,29 @@ public class OrderNotificationServiceImpl implements OrderNotificationService {
         orderNotification.setItemNames(orderDTO.getJsonObject());
         orderNotificationRepo.save(orderNotification);
     }
+
+
+//        try{
+//        String emailId = (String) orderDTO.getJsonObject().get("emailId");
+//        System.out.println("EmailId " + emailId);
+//        if(emailId.isEmpty()){
+//            throw new IllegalArgumentException("EmailId is empty.");
+//        }
+//        if (orderNotificationRepo.findById(emailId).isPresent()) {
+//            // Create a new OrderNotification object if it doesn't exist
+//            OrderNotification orderNotification = new OrderNotification();
+//            orderNotification.setEmailId(emailId);
+//            orderNotification.setMessage("Orders");
+//            orderNotification.setItemNames(orderDTO.getJsonObject());
+//            orderNotificationRepo.save(orderNotification);
+//        }else {
+//            OrderNotification existingOrderNotification = orderNotificationRepo.findById(emailId).get();
+//            existingOrderNotification.setMessage("Orders");
+//            existingOrderNotification.setItemNames(orderDTO.getJsonObject());
+//            orderNotificationRepo.save(existingOrderNotification);
+//        }
+//    }catch (Exception exception){
+//        System.out.println(exception.getMessage());
+//    }
+
 }

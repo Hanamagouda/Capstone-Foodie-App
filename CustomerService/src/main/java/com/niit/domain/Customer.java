@@ -27,6 +27,6 @@ public class Customer {
     private String image;
     private String typeOfUser;
     private List<Restaurant> favorite;
-    private Address address;
+    private List<Address> address;
 
 }

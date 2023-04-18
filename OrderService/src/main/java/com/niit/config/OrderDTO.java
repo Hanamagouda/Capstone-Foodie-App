@@ -8,7 +8,6 @@ package com.niit.config;
 
 import lombok.*;
 import org.json.simple.JSONObject;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

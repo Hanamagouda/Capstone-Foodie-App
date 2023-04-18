@@ -10,6 +10,8 @@ import com.niit.domain.Cuisine;
 import com.niit.domain.Restaurant;
 import com.niit.domain.Vendor;
 import com.niit.exception.*;
+import com.niit.proxy.RestaurantProxy;
+import com.niit.proxy.UserAuthProxy;
 import com.niit.repository.VendorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,9 +24,18 @@ public class VendorServiceImpl implements VendorService {
 
     VendorRepo vendorRepo;
 
+    RestaurantProxy restaurantProxy;
+
+    UserAuthProxy userAuthProxy;
+
+    SequenceGeneratorService generatorService;
+
     @Autowired
-    public VendorServiceImpl(VendorRepo vendorRepo) {
+    public VendorServiceImpl(VendorRepo vendorRepo, RestaurantProxy restaurantProxy, UserAuthProxy userAuthProxy, SequenceGeneratorService generatorService) {
         this.vendorRepo = vendorRepo;
+        this.restaurantProxy = restaurantProxy;
+        this.userAuthProxy = userAuthProxy;
+        this.generatorService = generatorService;
     }
 
     @Override
@@ -32,7 +43,11 @@ public class VendorServiceImpl implements VendorService {
         if (vendorRepo.findById(vendor.getEmailId()).isPresent()) {
             throw new VendorAlreadyExistException();
         }
-        return vendorRepo.save(vendor);
+        Vendor savedVendor = vendorRepo.save(vendor);
+        if (!(savedVendor.getEmailId().isEmpty())) {
+            userAuthProxy.saveVendorToAuthentication(savedVendor);
+        }
+        return savedVendor;
     }
 
     @Override
@@ -43,9 +58,13 @@ public class VendorServiceImpl implements VendorService {
         Vendor vendor = vendorRepo.findById(vendorId).get();
         if (vendor.getRestaurant() == null) {
             vendor.setRestaurant(restaurant);
+            vendor.getRestaurant().setRestaurantId(generatorService.getSequenceNumber(vendor.getSEQUENCE_NAME()));
         }
-        Vendor save = vendorRepo.save(vendor);
-        return save;
+        Vendor saved = vendorRepo.save(vendor);
+        if (!(saved.getRestaurant() == null)) {
+            restaurantProxy.addRestaurant(restaurant);
+        }
+        return saved;
     }
 
     @Override
@@ -53,6 +72,7 @@ public class VendorServiceImpl implements VendorService {
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
+
         Vendor vendor = vendorRepo.findById(vendorId).get();
         if (vendor.getRestaurant().getRestaurantId() == restaurantId) {
             if (vendor.getRestaurant().getCuisineList() == null) {
@@ -63,7 +83,12 @@ public class VendorServiceImpl implements VendorService {
                 vendor.getRestaurant().getCuisineList().add(cuisine);
             }
         }
-        return vendorRepo.save(vendor);
+        cuisine.setCuisineId(generatorService.getSequenceNumber(vendor.getSEQUENCE_NAME()));
+        Vendor saved = vendorRepo.save(vendor);
+        if (!(vendor.getRestaurant().getCuisineList().isEmpty())) {
+            restaurantProxy.addCuisine(saved.getRestaurant().getRestaurantId(), cuisine);
+        }
+        return saved;
     }
 
     @Override
@@ -107,8 +132,9 @@ public class VendorServiceImpl implements VendorService {
 
         for (Cuisine cuisine : restaurant.getCuisineList()) {
             if (cuisine.getCuisineId() == (cuisineId)) {
-                restaurant.getCuisineList().remove(cuisine);
+                restaurantProxy.deleteCuisine(restaurantId, cuisineId);
                 vendorRepo.save(vendor);
+                found = true;
             }
         }
         if (!found) {
@@ -130,6 +156,7 @@ public class VendorServiceImpl implements VendorService {
             vendor.getRestaurant().setRestaurantImage(restaurant.getRestaurantImage());
             vendorRepo.save(vendor);
         }
+        restaurantProxy.updateRestaurant(restaurantId, restaurant);
         return vendor.getRestaurant();
     }
 
@@ -149,6 +176,7 @@ public class VendorServiceImpl implements VendorService {
                 vendorRepo.save(vendor);
             }
         }
+        restaurantProxy.updateCuisine(restaurantId, cuisineId, cuisine);
         return vendor.getRestaurant().getCuisineList();
     }
 

@@ -1,5 +1,6 @@
 package com.niit.service;
 
+import com.niit.domain.Address;
 import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
 import com.niit.exception.CustomerAlreadyExistsException;
@@ -21,4 +22,9 @@ public interface CustomerService {
     public Customer updateCustomer(String emailId, Customer customer) throws CustomerNotFoundException;
 
     public List<Restaurant> deleteRestaurantFromFavorite(String emailId, int restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException;
+
+    public List<Address> addAddress(String emailId, Address address) throws CustomerNotFoundException;
+
+    public List<Address> getAddress(String emailId) throws CustomerNotFoundException;
+
 }

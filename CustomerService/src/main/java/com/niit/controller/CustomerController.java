@@ -6,6 +6,7 @@
 
 package com.niit.controller;
 
+import com.niit.domain.Address;
 import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
 import com.niit.exception.CustomerAlreadyExistsException;
@@ -110,6 +111,34 @@ public class CustomerController {
             }
         } catch (Exception exception) {
             return new ResponseEntity<String>("Error Occurred while trying to update customer details", HttpStatus.BAD_GATEWAY);
+        }
+    }
+
+    @PostMapping("/addAddress/{emailId}")
+    public ResponseEntity<?> addAddress(@PathVariable String emailId, @RequestBody Address address) {
+        try {
+            List<Address> addresses = customerService.addAddress(emailId, address);
+            if (addresses == null) {
+                throw new CustomerNotFoundException();
+            } else {
+                return new ResponseEntity<List<Address>>(addresses, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to add customer address", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/getAddress/{emailId}")
+    public ResponseEntity<?> getAddress(@PathVariable String emailId) {
+        try {
+            List<Address> address = customerService.getAddress(emailId);
+            if (address == null) {
+                throw new CustomerNotFoundException();
+            } else {
+                return new ResponseEntity<List<Address>>(address, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to get customer address", HttpStatus.BAD_REQUEST);
         }
     }
 }

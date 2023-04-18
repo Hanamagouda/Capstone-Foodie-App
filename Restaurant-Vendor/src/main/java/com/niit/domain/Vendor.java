@@ -8,6 +8,7 @@ package com.niit.domain;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -18,8 +19,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @ToString
 
 public class Vendor {
+    @Transient
+    private String SEQUENCE_NAME = "restaurant_sequence";
     @Id
     private String emailId;
     private String name;
+    private String password;
+    private String typeOfUser;
     private Restaurant restaurant;
 }

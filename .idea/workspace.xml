@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/DbSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/proxy/UserAuthProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/SequenceGeneratorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/service/OrderNotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/config/OrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/niit/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/RestaurantVendorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/RestaurantVendorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/controller/VendorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/controller/VendorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/proxy/RestaurantProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/proxy/RestaurantProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/VendorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/service/VendorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/DbSequence.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/domain/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/repository/RestaurantRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/SequenceGeneratorService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +85,10 @@
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NotificationServiceApplication">
-    <configuration name="NotificationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.NotificationServiceApplication" />
-      <module name="NotificationService" />
+  <component name="RunManager" selected="Application.RestaurantVendorApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.ApiGatewayApplication" />
+      <module name="APIGateway" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.niit.*" />
@@ -74,9 +99,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niit.OrderServiceApplication" />
-      <module name="OrderService" />
+    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.CustomerServiceApplication" />
+      <module name="CustomerService" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.niit.*" />
@@ -128,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.RestaurantVendorApplication" />
         <item itemvalue="Application.RestaurantServiceApplication" />
         <item itemvalue="Application.UserAuthenticationApplication" />
-        <item itemvalue="Application.NotificationServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -144,13 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Created exceptions in RestaurantService.java">
-      <created>1680495307829</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1680495307830</updated>
     </task>
     <task id="LOCAL-00022" summary="Add feign dependency in RestaurantService pom.xml">
       <created>1680499023309</created>
@@ -488,14 +506,20 @@
       <option name="project" value="LOCAL" />
       <updated>1681262691117</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="We declare  instance field inside the restaurant domain class and annotated with @Transient because we don't want to persist this field in mongodb.">
+      <created>1681263456810</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1681263456810</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created OrderDTO.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Refactor whole OrderDTO.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Added one more instance variable of type JsonObject in OrderNotification.java class inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created OrderNotificationRepo.java interface inside the NotificationServiceApplication.java" />
@@ -520,7 +544,8 @@
     <MESSAGE value="Created one domain DbSequence.java inside the RestaurantService Application" />
     <MESSAGE value="Created one service SequenceGeneratorService.java inside the RestaurantService Application" />
     <MESSAGE value="Injected the SequenceGeneratorService inside the RestaurantServiceImpl.java and annotated with Autowired" />
-    <option name="LAST_COMMIT_MESSAGE" value="Injected the SequenceGeneratorService inside the RestaurantServiceImpl.java and annotated with Autowired" />
+    <MESSAGE value="We declare  instance field inside the restaurant domain class and annotated with @Transient because we don't want to persist this field in mongodb." />
+    <option name="LAST_COMMIT_MESSAGE" value="We declare  instance field inside the restaurant domain class and annotated with @Transient because we don't want to persist this field in mongodb." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

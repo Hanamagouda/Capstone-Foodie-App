@@ -51,8 +51,6 @@ public class OrderServiceImpl implements OrderService {
         if (orderRepository.findById(order.getOrderId()).isPresent()) {
             throw new OrderAlreadyExistsException();
         }
-        order.setOrderId(generatorService.getSequenceNumber(order.getSEQUENCE_NAME()));
-
         OrderDTO orderDTO = new OrderDTO();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("orderId : ", order.getOrderId());
@@ -68,6 +66,7 @@ public class OrderServiceImpl implements OrderService {
         message.setText("Order Placed Successfully :)");
         message.setSubject("Foodie");
         javaMailSender.send(message);
+        order.setOrderId(generatorService.getSequenceNumber(order.getSEQUENCE_NAME()));
         return orderRepository.save(order);
     }
 

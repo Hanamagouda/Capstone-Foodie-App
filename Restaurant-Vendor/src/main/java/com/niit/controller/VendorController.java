@@ -11,6 +11,7 @@ import com.niit.domain.Restaurant;
 import com.niit.domain.Vendor;
 import com.niit.exception.CuisineNotFoundException;
 import com.niit.exception.RestaurantNotFoundException;
+import com.niit.exception.VendorAlreadyExistException;
 import com.niit.exception.VendorNotFoundException;
 import com.niit.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/vendor")
 public class VendorController {
-    private VendorService vendorService;
+    private final VendorService vendorService;
 
 
     @Autowired
@@ -32,7 +33,7 @@ public class VendorController {
     }
 
     @PostMapping("/addVendor")
-    public ResponseEntity<?> addVendor(@RequestBody Vendor vendor) {
+    public ResponseEntity<?> addVendor(@RequestBody Vendor vendor) throws VendorNotFoundException, VendorAlreadyExistException {
         try {
             Vendor addedVendor = vendorService.addVendor(vendor);
             if (addedVendor == null) {
@@ -46,7 +47,7 @@ public class VendorController {
     }
 
     @PostMapping("/addRestro/{vendorId}")
-    public ResponseEntity<?> addRestaurant(@PathVariable String vendorId, @RequestBody Restaurant restaurant) {
+    public ResponseEntity<?> addRestaurant(@PathVariable String vendorId, @RequestBody Restaurant restaurant) throws VendorNotFoundException {
         try {
             Vendor vendor = vendorService.addRestaurant(vendorId, restaurant);
             if (vendor == null) {
@@ -102,17 +103,17 @@ public class VendorController {
     }
 
     @DeleteMapping("/deleteCuisine/{vendorId}/{restaurantId}/{cuisineId}")
-    public ResponseEntity<?> deleteCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId) {
-        try {
-            List<Cuisine> cuisines = vendorService.deleteCuisine(vendorId, restaurantId, cuisineId);
-            if (cuisines == null) {
-                throw new CuisineNotFoundException();
-            } else {
-                return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
-            }
-        } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to delete specific cuisine", HttpStatus.BAD_REQUEST);
+    public ResponseEntity<?> deleteCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId) throws VendorNotFoundException, CuisineNotFoundException {
+//        try {
+        List<Cuisine> cuisines = vendorService.deleteCuisine(vendorId, restaurantId, cuisineId);
+        if (cuisines == null) {
+            throw new CuisineNotFoundException();
+        } else {
+            return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
         }
+//        } catch (Exception exception) {
+//            return new ResponseEntity<String>("Error Occurred while trying to delete specific cuisine", HttpStatus.BAD_REQUEST);
+//        }
     }
 
     @PutMapping("/updateRestro/{vendorId}/{restaurantId}")

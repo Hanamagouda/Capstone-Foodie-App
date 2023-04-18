@@ -6,6 +6,7 @@
 
 package com.niit.service;
 
+import com.niit.domain.Address;
 import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
 import com.niit.exception.CustomerAlreadyExistsException;
@@ -16,7 +17,10 @@ import com.niit.proxy.CustomerProxy;
 import com.niit.proxy.VendorProxy;
 import com.niit.repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -29,13 +33,19 @@ public class CustomerServiceImpl implements CustomerService {
 
     private CustomerProxy customerProxy;
     private VendorProxy vendorProxy;
+    @Value("${spring.mail.username}")
+    private String sender;
+
+    private JavaMailSender javaMailSender;
 
     @Autowired
-    public CustomerServiceImpl(CustomerRepo customerRepo, CustomerProxy customerProxy, VendorProxy vendorProxy) {
+    public CustomerServiceImpl(CustomerRepo customerRepo, CustomerProxy customerProxy, VendorProxy vendorProxy, JavaMailSender javaMailSender) {
         this.customerRepo = customerRepo;
         this.customerProxy = customerProxy;
         this.vendorProxy = vendorProxy;
+        this.javaMailSender = javaMailSender;
     }
+
 
     @Override
     public Customer registerCustomer(Customer customer) throws CustomerAlreadyExistsException {
@@ -46,9 +56,22 @@ public class CustomerServiceImpl implements CustomerService {
         if (!(savedCustomer.getEmailId().isEmpty())) {
             ResponseEntity<?> responseEntity = customerProxy.saveCustomerToAuthentication(savedCustomer);
         }
-        if (savedCustomer.getTypeOfUser().equalsIgnoreCase("vendor")) {
-            ResponseEntity<?> responseEntity = vendorProxy.saveCustomerToVendor(savedCustomer);
-        }
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom(sender);
+        message.setTo(customer.getEmailId());
+        message.setSubject("Foodie Application");
+        String newline = System.lineSeparator();
+        message.setText("You Registered our Foodie Application successfully :"
+                + newline +
+                "Email Id : " + customer.getEmailId()
+                + newline +
+                "Name : " + customer.getName()
+                + newline +
+                "Contact Number : " + customer.getContactNumber()
+                + newline +
+                "WelCome To Our Foodie Family :) ");
+
+        javaMailSender.send(message);
         return savedCustomer;
     }
 
@@ -125,9 +148,31 @@ public class CustomerServiceImpl implements CustomerService {
         return customer.getFavorite();
     }
 
+    @Override
+    public List<Address> addAddress(String emailId, Address address) throws CustomerNotFoundException {
+        Customer customer = customerRepo.findById(emailId).get();
+        if (customer == null) {
+            throw new CustomerNotFoundException();
+        }
+        if (customer.getAddress() == null) {
+            customer.setAddress(Arrays.asList(address));
+        } else {
+            customer.getAddress().add(address);
+        }
+        customerRepo.save(customer);
+        List<Address> address1 = customer.getAddress();
+        return address1;
+    }
 
-
-
+    @Override
+    public List<Address> getAddress(String emailId) throws CustomerNotFoundException {
+        Customer customer = customerRepo.findById(emailId).get();
+        if (customer.getEmailId().isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        List<Address> address = customer.getAddress();
+        return address;
+    }
 
 
 }

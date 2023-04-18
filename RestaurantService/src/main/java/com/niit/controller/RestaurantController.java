@@ -158,7 +158,7 @@ public class RestaurantController {
 
     @DeleteMapping("/deleteCuisine/{restaurantId}/{cuisineId}")
     public ResponseEntity<?> deleteCuisine(@PathVariable int restaurantId, @PathVariable int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
-        //  try{
+//          try{
         List<Cuisine> cuisines = restaurantService.deleteCuisine(restaurantId, cuisineId);
         if (cuisines == null) {
             throw new CuisineNotFoundException();
@@ -181,6 +181,20 @@ public class RestaurantController {
             }
         } catch (Exception exception) {
             return new ResponseEntity<String>("Error Occurred while trying to delete restaurant", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/getRestaurant/{restaurantId}")
+    public ResponseEntity<?> getRestaurantById(@PathVariable int restaurantId) {
+        try {
+            Restaurant restaurantById = restaurantService.getRestaurantById(restaurantId);
+            if (restaurantById == null) {
+                throw new RestaurantNotFoundException();
+            } else {
+                return new ResponseEntity<Restaurant>(restaurantById, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to get restaurant", HttpStatus.BAD_REQUEST);
         }
     }
 }

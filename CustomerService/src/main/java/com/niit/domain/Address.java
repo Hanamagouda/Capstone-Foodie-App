@@ -7,6 +7,7 @@
 package com.niit.domain;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -16,6 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @ToString
 public class Address {
+    @Id
     private String houseNumber;
     private String street;
     private String city;

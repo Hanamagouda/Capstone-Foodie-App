@@ -31,14 +31,12 @@ public class RestaurantServiceImpl implements RestaurantService {
     private RestaurantProxy restaurantProxy;
     private OrderProxy orderProxy;
 
-    private SequenceGeneratorService generatorService;
 
     @Autowired
-    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy, OrderProxy orderProxy, SequenceGeneratorService generatorService) {
+    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy, OrderProxy orderProxy) {
         this.restaurantRepo = restaurantRepo;
         this.restaurantProxy = restaurantProxy;
         this.orderProxy = orderProxy;
-        this.generatorService = generatorService;
     }
 
     @Override
@@ -46,7 +44,6 @@ public class RestaurantServiceImpl implements RestaurantService {
         if (restaurantRepo.findById(restaurant.getRestaurantId()).isPresent()) {
             throw new RestaurantAlreadyExistsException();
         }
-        restaurant.setRestaurantId(generatorService.getSequenceNumber(restaurant.getSEQUENCE_NAME()));
         return restaurantRepo.save(restaurant);
     }
 
@@ -98,7 +95,8 @@ public class RestaurantServiceImpl implements RestaurantService {
         if (restaurantRepo.findByLocation(restaurantLocation).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
-        return restaurantRepo.findByLocation(restaurantLocation);
+        List<Restaurant> byLocation = restaurantRepo.findByLocation(restaurantLocation);
+        return byLocation;
     }
 
     @Override
@@ -167,5 +165,15 @@ public class RestaurantServiceImpl implements RestaurantService {
         }
         restaurantRepo.deleteById(restaurantId);
         return restaurantRepo.findAll();
+    }
+
+    @Override
+    public Restaurant getRestaurantById(int restaurantId) throws RestaurantNotFoundException {
+        if (restaurantRepo.findById(restaurantId).isEmpty()) {
+            throw new RestaurantNotFoundException();
+        }
+        Restaurant restaurant = restaurantRepo.findById(restaurantId).get();
+
+        return restaurant;
     }
 }
