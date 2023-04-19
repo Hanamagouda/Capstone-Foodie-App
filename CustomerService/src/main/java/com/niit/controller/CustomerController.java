@@ -7,8 +7,10 @@
 package com.niit.controller;
 
 import com.niit.domain.Address;
+import com.niit.domain.Cuisine;
 import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
+import com.niit.exception.CuisineNotFoundException;
 import com.niit.exception.CustomerAlreadyExistsException;
 import com.niit.exception.CustomerNotFoundException;
 import com.niit.exception.RestaurantNotFoundException;
@@ -139,6 +141,48 @@ public class CustomerController {
             }
         } catch (Exception exception) {
             return new ResponseEntity<String>("Error Occurred while trying to get customer address", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/cart/{emailId}")
+    public ResponseEntity<?> addToCart(@PathVariable String emailId, @RequestBody Cuisine cuisine) {
+        try {
+            List<Cuisine> cuisines = customerService.addToCart(emailId, cuisine);
+            if (cuisines == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.ACCEPTED);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to add cuisine into cart", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/allCartItem/{emailId}")
+    public ResponseEntity<?> getAllCart(@PathVariable String emailId) {
+        try {
+            List<Cuisine> cartItems = customerService.getCartItems(emailId);
+            if (cartItems == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(cartItems, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to fetch specific user cart items", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @DeleteMapping("/removeFromCart/{emailId}")
+    public ResponseEntity<?> removeFromCart(@PathVariable String emailId, @PathVariable int cuisineId) {
+        try {
+            List<Cuisine> cuisines = customerService.removeFromCart(emailId, cuisineId);
+            if (cuisines == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to remove specific cuisine from cart", HttpStatus.BAD_REQUEST);
         }
     }
 }
