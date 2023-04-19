@@ -28,5 +28,6 @@ public class Customer {
     private String typeOfUser;
     private List<Restaurant> favorite;
     private List<Address> address;
+    private List<Cuisine> cart;
 
 }

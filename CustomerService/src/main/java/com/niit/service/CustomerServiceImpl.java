@@ -7,12 +7,10 @@
 package com.niit.service;
 
 import com.niit.domain.Address;
+import com.niit.domain.Cuisine;
 import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
-import com.niit.exception.CustomerAlreadyExistsException;
-import com.niit.exception.CustomerNotFoundException;
-import com.niit.exception.RestaurantAlreadyExistsException;
-import com.niit.exception.RestaurantNotFoundException;
+import com.niit.exception.*;
 import com.niit.proxy.CustomerProxy;
 import com.niit.proxy.VendorProxy;
 import com.niit.repository.CustomerRepo;
@@ -35,6 +33,7 @@ public class CustomerServiceImpl implements CustomerService {
     private VendorProxy vendorProxy;
     @Value("${spring.mail.username}")
     private String sender;
+
 
     private JavaMailSender javaMailSender;
 
@@ -172,6 +171,52 @@ public class CustomerServiceImpl implements CustomerService {
         }
         List<Address> address = customer.getAddress();
         return address;
+    }
+
+    @Override
+    public List<Cuisine> addToCart(String emailId, Cuisine cuisine) throws CustomerNotFoundException {
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        Customer customer = customerRepo.findById(emailId).get();
+        if (customer.getCart() == null) {
+            customer.setCart(Arrays.asList(cuisine));
+        } else {
+            customer.getCart().add(cuisine);
+        }
+        customerRepo.save(customer);
+
+        return customer.getCart();
+    }
+
+    @Override
+    public List<Cuisine> getCartItems(String emailId) throws CustomerNotFoundException {
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        Customer customer = customerRepo.findById(emailId).get();
+        return customer.getCart();
+    }
+
+    @Override
+    public List<Cuisine> removeFromCart(String emailId, int cuisineId) throws CustomerNotFoundException, CuisineNotFoundException {
+        if (customerRepo.findById(emailId).isEmpty()) {
+            throw new CustomerNotFoundException();
+        }
+        Customer customer = customerRepo.findById(emailId).get();
+        boolean found = false;
+        for (Cuisine cuisine : customer.getCart()) {
+            if (cuisine.getCuisineId() == cuisineId) {
+                customer.getCart().remove(cuisine);
+                customerRepo.save(customer);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            throw new CuisineNotFoundException();
+        }
+        return customer.getCart();
     }
 
 

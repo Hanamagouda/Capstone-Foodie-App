@@ -61,9 +61,18 @@ public class OrderServiceImpl implements OrderService {
         orderDTO.setJsonObject(jsonObject);
         template.convertAndSend(exchange.getName(), "order-routing", orderDTO);
         SimpleMailMessage message = new SimpleMailMessage();
+        String newline = System.lineSeparator();
         message.setFrom(sender);
         message.setTo(emailId);
-        message.setText("Order Placed Successfully :)");
+        message.setText("Order Placed Successfully : "
+                + newline +
+                "Email Id : " + order.getOrderId()
+                + newline +
+                "Items : " + order.getOrderedItems()
+                + newline +
+                "Quantity : " + order.getQuantity()
+                + newline +
+                "WelCome To Our Foodie Family :) ");
         message.setSubject("Foodie");
         javaMailSender.send(message);
         order.setOrderId(generatorService.getSequenceNumber(order.getSEQUENCE_NAME()));

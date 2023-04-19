@@ -1,12 +1,10 @@
 package com.niit.service;
 
 import com.niit.domain.Address;
+import com.niit.domain.Cuisine;
 import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
-import com.niit.exception.CustomerAlreadyExistsException;
-import com.niit.exception.CustomerNotFoundException;
-import com.niit.exception.RestaurantAlreadyExistsException;
-import com.niit.exception.RestaurantNotFoundException;
+import com.niit.exception.*;
 
 import java.util.List;
 
@@ -26,5 +24,11 @@ public interface CustomerService {
     public List<Address> addAddress(String emailId, Address address) throws CustomerNotFoundException;
 
     public List<Address> getAddress(String emailId) throws CustomerNotFoundException;
+
+    public List<Cuisine> addToCart(String emailId, Cuisine cuisine) throws CustomerNotFoundException;
+
+    public List<Cuisine> getCartItems(String emailId) throws CustomerNotFoundException;
+
+    public List<Cuisine> removeFromCart(String emailId, int cuisineId) throws CustomerNotFoundException, CuisineNotFoundException;
 
 }
