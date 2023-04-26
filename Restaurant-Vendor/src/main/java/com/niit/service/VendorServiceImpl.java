@@ -14,6 +14,7 @@ import com.niit.proxy.RestaurantProxy;
 import com.niit.proxy.UserAuthProxy;
 import com.niit.repository.VendorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -123,24 +124,22 @@ public class VendorServiceImpl implements VendorService {
 
     @Override
     public List<Cuisine> deleteCuisine(String vendorId, int restaurantId, int cuisineId) throws VendorNotFoundException, CuisineNotFoundException {
+        boolean found = false;
         if (vendorRepo.findById(vendorId).isEmpty()) {
             throw new VendorNotFoundException();
         }
         Vendor vendor = vendorRepo.findById(vendorId).get();
         Restaurant restaurant = vendor.getRestaurant();
-        boolean found = false;
+        List<Cuisine> cuisineList = restaurant.getCuisineList();
+        found = cuisineList.removeIf(cuisine -> cuisine.getCuisineId() == cuisineId);
+        ResponseEntity<?> responseEntity = restaurantProxy.deleteCuisine(restaurantId, cuisineId);
 
-        for (Cuisine cuisine : restaurant.getCuisineList()) {
-            if (cuisine.getCuisineId() == (cuisineId)) {
-                restaurantProxy.deleteCuisine(restaurantId, cuisineId);
-                vendorRepo.save(vendor);
-                found = true;
-            }
-        }
         if (!found) {
             throw new CuisineNotFoundException();
         }
+        vendorRepo.save(vendor);
         return restaurant.getCuisineList();
+
     }
 
 
