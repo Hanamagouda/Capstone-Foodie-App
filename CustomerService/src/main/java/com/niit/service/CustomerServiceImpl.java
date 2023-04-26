@@ -12,7 +12,6 @@ import com.niit.domain.Customer;
 import com.niit.domain.Restaurant;
 import com.niit.exception.*;
 import com.niit.proxy.CustomerProxy;
-import com.niit.proxy.VendorProxy;
 import com.niit.repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,7 +29,6 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepo customerRepo;
 
     private CustomerProxy customerProxy;
-    private VendorProxy vendorProxy;
     @Value("${spring.mail.username}")
     private String sender;
 
@@ -38,10 +36,9 @@ public class CustomerServiceImpl implements CustomerService {
     private JavaMailSender javaMailSender;
 
     @Autowired
-    public CustomerServiceImpl(CustomerRepo customerRepo, CustomerProxy customerProxy, VendorProxy vendorProxy, JavaMailSender javaMailSender) {
+    public CustomerServiceImpl(CustomerRepo customerRepo, CustomerProxy customerProxy, JavaMailSender javaMailSender) {
         this.customerRepo = customerRepo;
         this.customerProxy = customerProxy;
-        this.vendorProxy = vendorProxy;
         this.javaMailSender = javaMailSender;
     }
 

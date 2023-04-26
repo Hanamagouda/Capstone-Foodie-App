@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "user-customer-service", url = "localhost:8081")
 public interface RestaurantProxy {
 
-    @PostMapping("/customer/cart/{emailId}")
+    @PostMapping("/customer/user/cart/{emailId}")
     ResponseEntity<?> addToCart(@PathVariable String emailId, @RequestBody Cuisine cuisine);
 }

@@ -147,15 +147,6 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Restaurant> deleteRestaurant(int restaurantId) throws RestaurantNotFoundException {
-        if (restaurantRepo.findById(restaurantId).isEmpty()) {
-            throw new RestaurantNotFoundException();
-        }
-        restaurantRepo.deleteById(restaurantId);
-        return restaurantRepo.findAll();
-    }
-
-    @Override
     public Restaurant getRestaurantById(int restaurantId) throws RestaurantNotFoundException {
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();

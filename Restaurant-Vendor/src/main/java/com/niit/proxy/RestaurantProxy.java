@@ -30,6 +30,4 @@ public interface RestaurantProxy {
     @DeleteMapping("/restaurant/deleteCuisine/{restaurantId}/{cuisineId}")
     public ResponseEntity<?> deleteCuisine(@PathVariable int restaurantId, @PathVariable int cuisineId);
 
-    @DeleteMapping("/restaurant/deleteRestaurant/{restaurantId}")
-    public ResponseEntity<?> deleteRestaurant(@PathVariable int restaurantId);
 }

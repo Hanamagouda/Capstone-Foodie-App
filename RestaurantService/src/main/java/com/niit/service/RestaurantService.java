@@ -35,7 +35,5 @@ public interface RestaurantService {
 
     public List<Cuisine> deleteCuisine(int restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException;
 
-    public List<Restaurant> deleteRestaurant(int restaurantId) throws RestaurantNotFoundException;
-
     public Restaurant getRestaurantById(int restaurantId) throws RestaurantNotFoundException;
 }

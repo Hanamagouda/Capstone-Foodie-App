@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be32b40-ba9b-4828-8779-34ffe36d763b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/filter/JwtFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/domain/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/OrderProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/proxy/VendorProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerService/src/main/java/com/niit/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/src/main/java/com/niit/filter/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/RestaurantVendorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/RestaurantVendorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/controller/VendorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/controller/VendorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/proxy/RestaurantProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant-Vendor/src/main/java/com/niit/proxy/RestaurantProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/RestaurantProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/Proxy/RestaurantProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/RestaurantServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/RestaurantServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/filter/JwtFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/niit/service/RestaurantServiceImpl.java" afterDir="false" />
     </list>
@@ -53,15 +58,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Capstone Project/Backend/Foodie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Capstone Project/Backend/Foodie&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ahmed\OneDrive\Desktop\Capstone Project\Backend\Foodie\EurekaServer\src\main\java" />
@@ -152,27 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680151528297</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Some changes inside the addRestaurantToFavorite().">
-      <created>1680500153941</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1680500153941</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Written addRestro Logic inside the RestaurantController.java">
-      <created>1680500994017</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1680500994018</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Written getAllRestaurants Logic inside the RestaurantController.java">
-      <created>1680501188506</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1680501188506</updated>
     </task>
     <task id="LOCAL-00028" summary="Written addCuisine Logic inside the RestaurantController.java">
       <created>1680501451865</created>
@@ -496,16 +480,34 @@
       <option name="project" value="LOCAL" />
       <updated>1681886600389</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="We modify the deleteCuisine() in the RestaurantServiceImpl.java">
+      <created>1682482728957</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1682482728959</updated>
+    </task>
+    <task id="LOCAL-00075" summary="We modify the deleteCuisine() in the RestaurantVendor Service impl">
+      <created>1682482795252</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1682482795252</updated>
+    </task>
+    <task id="LOCAL-00076" summary="We applied the token in the CustomerService">
+      <created>1682483017814</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1682483017814</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created OrderNotificationServiceImpl.java class inside the NotificationServiceApplication.java" />
-    <MESSAGE value="Created MessageConfiguration.java and OrderDTO.java inside the OrderServiceApplication.java" />
-    <MESSAGE value="Created OrderNotification.java inside the NotificationServiceApplication.java" />
     <MESSAGE value="Created updateCustomer() inside the CustomerServiceApplication.java" />
     <MESSAGE value="Created PutMapping request in CustomerController.java inside the CustomerServiceApplication.java" />
     <MESSAGE value="Added one Vendor Application inside the Foodie Application" />
@@ -528,7 +530,10 @@
     <MESSAGE value="We added the notification functionality in customer, when the customer registration successful is done it will send the mail to the customer." />
     <MESSAGE value="We added three new method in CustomerServiceImpl AddToCart(), RemoveFromCart(), and one is GetCart()." />
     <MESSAGE value="We added three new  request method in CustomerController AddToCart(), RemoveFromCart(), and one is GetCart()." />
-    <option name="LAST_COMMIT_MESSAGE" value="We added three new  request method in CustomerController AddToCart(), RemoveFromCart(), and one is GetCart()." />
+    <MESSAGE value="We modify the deleteCuisine() in the RestaurantServiceImpl.java" />
+    <MESSAGE value="We modify the deleteCuisine() in the RestaurantVendor Service impl" />
+    <MESSAGE value="We applied the token in the CustomerService" />
+    <option name="LAST_COMMIT_MESSAGE" value="We applied the token in the CustomerService" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

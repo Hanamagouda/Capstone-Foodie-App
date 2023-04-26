@@ -1,6 +1,6 @@
 /*
  * Author : Mushib Khan
- * Date : 04-04-2023
+ * Date : 26-04-2023
  * Created with : IntelliJ IDEA Community Edition
  */
 
@@ -36,4 +36,3 @@ public class JwtFilter extends GenericFilterBean {
         }
     }
 }
-

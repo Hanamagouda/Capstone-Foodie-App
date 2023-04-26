@@ -11,7 +11,6 @@ import com.niit.domain.Restaurant;
 import com.niit.domain.Vendor;
 import com.niit.exception.CuisineNotFoundException;
 import com.niit.exception.RestaurantNotFoundException;
-import com.niit.exception.VendorAlreadyExistException;
 import com.niit.exception.VendorNotFoundException;
 import com.niit.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,7 @@ public class VendorController {
     }
 
     @PostMapping("/addVendor")
-    public ResponseEntity<?> addVendor(@RequestBody Vendor vendor) throws VendorNotFoundException, VendorAlreadyExistException {
+    public ResponseEntity<?> addVendor(@RequestBody Vendor vendor) {
         try {
             Vendor addedVendor = vendorService.addVendor(vendor);
             if (addedVendor == null) {
@@ -46,8 +45,8 @@ public class VendorController {
         }
     }
 
-    @PostMapping("/addRestro/{vendorId}")
-    public ResponseEntity<?> addRestaurant(@PathVariable String vendorId, @RequestBody Restaurant restaurant) throws VendorNotFoundException {
+    @PostMapping("/user/addRestro/{vendorId}")
+    public ResponseEntity<?> addRestaurant(@PathVariable String vendorId, @RequestBody Restaurant restaurant) {
         try {
             Vendor vendor = vendorService.addRestaurant(vendorId, restaurant);
             if (vendor == null) {
@@ -60,7 +59,7 @@ public class VendorController {
         }
     }
 
-    @PostMapping("/addCuisine/{vendorId}/{restaurantId}")
+    @PostMapping("/user/addCuisine/{vendorId}/{restaurantId}")
     public ResponseEntity<?> addCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @RequestBody Cuisine cuisine) {
         try {
             Vendor vendor = vendorService.addCuisine(vendorId, restaurantId, cuisine);
@@ -74,7 +73,7 @@ public class VendorController {
         }
     }
 
-    @GetMapping("/getRestro/{vendorId}")
+    @GetMapping("/user/getRestro/{vendorId}")
     public ResponseEntity<?> getRestaurant(@PathVariable String vendorId) {
         try {
             Restaurant restaurant = vendorService.getRestaurant(vendorId);
@@ -88,7 +87,7 @@ public class VendorController {
         }
     }
 
-    @GetMapping("/cuisines/{vendorId}/{restaurantId}")
+    @GetMapping("/user/cuisines/{vendorId}/{restaurantId}")
     public ResponseEntity<?> getAllCuisine(@PathVariable String vendorId, @PathVariable int restaurantId) {
         try {
             List<Cuisine> allCuisine = vendorService.getAllCuisine(vendorId, restaurantId);
@@ -102,21 +101,21 @@ public class VendorController {
         }
     }
 
-    @DeleteMapping("/deleteCuisine/{vendorId}/{restaurantId}/{cuisineId}")
-    public ResponseEntity<?> deleteCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId) throws VendorNotFoundException, CuisineNotFoundException {
-//        try {
-        List<Cuisine> cuisines = vendorService.deleteCuisine(vendorId, restaurantId, cuisineId);
-        if (cuisines == null) {
-            throw new CuisineNotFoundException();
-        } else {
-            return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
+    @DeleteMapping("/user/deleteCuisine/{vendorId}/{restaurantId}/{cuisineId}")
+    public ResponseEntity<?> deleteCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId) {
+        try {
+            List<Cuisine> cuisines = vendorService.deleteCuisine(vendorId, restaurantId, cuisineId);
+            if (cuisines == null) {
+                throw new CuisineNotFoundException();
+            } else {
+                return new ResponseEntity<List<Cuisine>>(cuisines, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to delete specific cuisine", HttpStatus.BAD_REQUEST);
         }
-//        } catch (Exception exception) {
-//            return new ResponseEntity<String>("Error Occurred while trying to delete specific cuisine", HttpStatus.BAD_REQUEST);
-//        }
     }
 
-    @PutMapping("/updateRestro/{vendorId}/{restaurantId}")
+    @PutMapping("/user/updateRestro/{vendorId}/{restaurantId}")
     public ResponseEntity<?> updateRestaurant(@PathVariable String vendorId, @PathVariable int restaurantId, @RequestBody Restaurant restaurant) {
         try {
             Restaurant updatedRestaurant = vendorService.updateRestaurant(vendorId, restaurantId, restaurant);
@@ -130,7 +129,7 @@ public class VendorController {
         }
     }
 
-    @PutMapping("/updateCuisine/{vendorId}/{restaurantId}/{cuisineId}")
+    @PutMapping("/user/updateCuisine/{vendorId}/{restaurantId}/{cuisineId}")
     public ResponseEntity<?> updateCuisine(@PathVariable String vendorId, @PathVariable int restaurantId, @PathVariable int cuisineId, @RequestBody Cuisine cuisine) {
         try {
             List<Cuisine> cuisines = vendorService.updateCuisine(vendorId, restaurantId, cuisineId, cuisine);
