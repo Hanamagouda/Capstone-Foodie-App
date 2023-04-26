@@ -46,7 +46,7 @@ public class CustomerController {
 //        }
     }
 
-    @PostMapping("/addRestro/{emailId}")
+    @PostMapping("/user/addRestro/{emailId}")
     public ResponseEntity<?> addRestaurantToFavorite(@PathVariable String emailId, @RequestBody Restaurant restaurant) {
         try {
             Customer restaurantAdded = customerService.addRestaurantToFavorite(emailId, restaurant);
@@ -60,21 +60,21 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/customerById/{emailId}")
-    public ResponseEntity<?> getCustomerById(@PathVariable String emailId) throws CustomerNotFoundException {
-//        try {
-        Customer customerById = customerService.getCustomerById(emailId);
-        if (customerById == null) {
-            throw new CustomerNotFoundException();
-        } else {
-            return new ResponseEntity<Customer>(customerById, HttpStatus.OK);
+    @GetMapping("/user/customerById/{emailId}")
+    public ResponseEntity<?> getCustomerById(@PathVariable String emailId) {
+        try {
+            Customer customerById = customerService.getCustomerById(emailId);
+            if (customerById == null) {
+                throw new CustomerNotFoundException();
+            } else {
+                return new ResponseEntity<Customer>(customerById, HttpStatus.OK);
+            }
+        } catch (Exception exception) {
+            return new ResponseEntity<String>("Error Occurred while trying to fetch customer by id", HttpStatus.BAD_REQUEST);
         }
-//        } catch (Exception exception) {
-//            return new ResponseEntity<String>("Error Occurred while trying to fetch customer by id", HttpStatus.BAD_REQUEST);
-//        }
     }
 
-    @GetMapping("/allRestro/{emailId}")
+    @GetMapping("/user/allRestro/{emailId}")
     public ResponseEntity<?> getFavoriteRestaurants(@PathVariable String emailId) {
         try {
             List<Restaurant> favoriteRestaurants = customerService.getFavoriteRestaurants(emailId);
@@ -88,7 +88,7 @@ public class CustomerController {
         }
     }
 
-    @DeleteMapping("/deleteRestro/{emailId}/{restaurantId}")
+    @DeleteMapping("/user/deleteRestro/{emailId}/{restaurantId}")
     public ResponseEntity<?> deleteRestaurantFromFavorite(@PathVariable String emailId, @PathVariable int restaurantId) throws RestaurantNotFoundException, CustomerNotFoundException {
         try {
             List<Restaurant> restaurants = customerService.deleteRestaurantFromFavorite(emailId, restaurantId);
@@ -102,7 +102,7 @@ public class CustomerController {
         }
     }
 
-    @PutMapping("/update/{emailId}")
+    @PutMapping("/user/update/{emailId}")
     public ResponseEntity<?> updateCustomer(@PathVariable String emailId, @RequestBody Customer customer) {
         try {
             Customer updatedCustomer = customerService.updateCustomer(emailId, customer);
@@ -116,7 +116,7 @@ public class CustomerController {
         }
     }
 
-    @PostMapping("/addAddress/{emailId}")
+    @PostMapping("/user/addAddress/{emailId}")
     public ResponseEntity<?> addAddress(@PathVariable String emailId, @RequestBody Address address) {
         try {
             List<Address> addresses = customerService.addAddress(emailId, address);
@@ -130,7 +130,7 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/getAddress/{emailId}")
+    @GetMapping("/user/getAddress/{emailId}")
     public ResponseEntity<?> getAddress(@PathVariable String emailId) {
         try {
             List<Address> address = customerService.getAddress(emailId);
@@ -144,7 +144,7 @@ public class CustomerController {
         }
     }
 
-    @PostMapping("/cart/{emailId}")
+    @PostMapping("/user/cart/{emailId}")
     public ResponseEntity<?> addToCart(@PathVariable String emailId, @RequestBody Cuisine cuisine) {
         try {
             List<Cuisine> cuisines = customerService.addToCart(emailId, cuisine);
@@ -158,7 +158,7 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/allCartItem/{emailId}")
+    @GetMapping("/user/allCartItem/{emailId}")
     public ResponseEntity<?> getAllCart(@PathVariable String emailId) {
         try {
             List<Cuisine> cartItems = customerService.getCartItems(emailId);
@@ -172,7 +172,7 @@ public class CustomerController {
         }
     }
 
-    @DeleteMapping("/removeFromCart/{emailId}")
+    @DeleteMapping("/user/removeFromCart/{emailId}")
     public ResponseEntity<?> removeFromCart(@PathVariable String emailId, @PathVariable int cuisineId) {
         try {
             List<Cuisine> cuisines = customerService.removeFromCart(emailId, cuisineId);
