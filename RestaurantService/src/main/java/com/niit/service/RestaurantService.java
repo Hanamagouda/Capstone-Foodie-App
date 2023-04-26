@@ -25,11 +25,9 @@ public interface RestaurantService {
 
     public List<Cuisine> getAllCuisine(int restaurantId) throws CuisineNotFoundException, RestaurantNotFoundException;
 
-    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant);
-
     public List<Restaurant> restaurantSearchByLocation(String restaurantLocation) throws RestaurantNotFoundException;
 
-    public Cuisine addCuisineToOrder(int orderId, Cuisine cuisine);
+    public Cuisine addCuisineToCart(String emailId, Cuisine cuisine);
 
     public List<Cuisine> updateCuisine(int restaurantId, int cuisineId, Cuisine ciusine) throws RestaurantNotFoundException, CuisineNotFoundException;
 

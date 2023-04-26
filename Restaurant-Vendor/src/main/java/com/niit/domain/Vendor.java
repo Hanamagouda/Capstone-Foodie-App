@@ -27,4 +27,5 @@ public class Vendor {
     private String password;
     private String typeOfUser;
     private Restaurant restaurant;
+    private String image;
 }

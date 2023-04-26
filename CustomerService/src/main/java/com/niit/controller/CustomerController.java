@@ -33,17 +33,17 @@ public class CustomerController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody Customer customer) {
-        try {
-            Customer registeredCustomer = customerService.registerCustomer(customer);
-            if (registeredCustomer == null) {
-                throw new CustomerAlreadyExistsException();
-            } else {
-                return new ResponseEntity<Customer>(registeredCustomer, HttpStatus.OK);
-            }
-        } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to register new user", HttpStatus.BAD_REQUEST);
+    public ResponseEntity<?> registerUser(@RequestBody Customer customer) throws CustomerAlreadyExistsException {
+//        try {
+        Customer registeredCustomer = customerService.registerCustomer(customer);
+        if (registeredCustomer == null) {
+            throw new CustomerAlreadyExistsException();
+        } else {
+            return new ResponseEntity<Customer>(registeredCustomer, HttpStatus.OK);
         }
+//        } catch (Exception exception) {
+//            return new ResponseEntity<String>("Error Occurred while trying to register new user", HttpStatus.BAD_REQUEST);
+//        }
     }
 
     @PostMapping("/addRestro/{emailId}")
@@ -61,17 +61,17 @@ public class CustomerController {
     }
 
     @GetMapping("/customerById/{emailId}")
-    public ResponseEntity<?> getCustomerById(@PathVariable String emailId) {
-        try {
-            Customer customerById = customerService.getCustomerById(emailId);
-            if (customerById == null) {
-                throw new CustomerNotFoundException();
-            } else {
-                return new ResponseEntity<Customer>(customerById, HttpStatus.OK);
-            }
-        } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to fetch customer by id", HttpStatus.BAD_REQUEST);
+    public ResponseEntity<?> getCustomerById(@PathVariable String emailId) throws CustomerNotFoundException {
+//        try {
+        Customer customerById = customerService.getCustomerById(emailId);
+        if (customerById == null) {
+            throw new CustomerNotFoundException();
+        } else {
+            return new ResponseEntity<Customer>(customerById, HttpStatus.OK);
         }
+//        } catch (Exception exception) {
+//            return new ResponseEntity<String>("Error Occurred while trying to fetch customer by id", HttpStatus.BAD_REQUEST);
+//        }
     }
 
     @GetMapping("/allRestro/{emailId}")

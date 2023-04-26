@@ -86,19 +86,6 @@ public class RestaurantController {
         }
     }
 
-    @PostMapping("/addRestroTofavorite/{emailId}")
-    public ResponseEntity<?> addRestaurantToFavorite(@PathVariable String emailId, @RequestBody Restaurant restaurant) {
-        try {
-            Restaurant addRestaurantToFavorite = restaurantService.addRestaurantToFavorite(emailId, restaurant);
-            if (addRestaurantToFavorite == null) {
-                throw new RestaurantAlreadyExistsException();
-            } else {
-                return new ResponseEntity<>(addRestaurantToFavorite, HttpStatus.OK);
-            }
-        } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to add restaurant to specific customer favorite", HttpStatus.BAD_REQUEST);
-        }
-    }
 
     @GetMapping("/location/{restaurantLocation}")
     public ResponseEntity<?> searchByLocation(@PathVariable String restaurantLocation) {
@@ -114,17 +101,17 @@ public class RestaurantController {
         }
     }
 
-    @PostMapping("/addCuisineToOrder/{orderId}")
-    public ResponseEntity<?> addCuisineToOrder(@PathVariable int orderId, @RequestBody Cuisine cuisine) throws CuisineNotFoundException {
+    @PostMapping("/addCuisineToCart/{emailId}")
+    public ResponseEntity<?> addCuisineToOrder(@PathVariable String emailId, @RequestBody Cuisine cuisine) throws CuisineNotFoundException {
         try {
-            Cuisine cuisineToOrder = restaurantService.addCuisineToOrder(orderId, cuisine);
-            if (cuisineToOrder == null) {
+            Cuisine cartCuisine = restaurantService.addCuisineToCart(emailId, cuisine);
+            if (cartCuisine == null) {
                 throw new CuisineNotFoundException();
             } else {
-                return new ResponseEntity<Cuisine>(cuisineToOrder, HttpStatus.OK);
+                return new ResponseEntity<Cuisine>(cartCuisine, HttpStatus.OK);
             }
         } catch (Exception exception) {
-            return new ResponseEntity<String>("Error Occurred while trying to add cuisine to order", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Error Occurred while trying to add cuisine to cart", HttpStatus.BAD_REQUEST);
         }
     }
 

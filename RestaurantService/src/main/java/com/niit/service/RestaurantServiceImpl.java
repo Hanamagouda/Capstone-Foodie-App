@@ -7,7 +7,6 @@
 
 package com.niit.service;
 
-import com.niit.Proxy.OrderProxy;
 import com.niit.Proxy.RestaurantProxy;
 import com.niit.domain.Cuisine;
 import com.niit.domain.Restaurant;
@@ -29,14 +28,12 @@ public class RestaurantServiceImpl implements RestaurantService {
     private RestaurantRepo restaurantRepo;
 
     private RestaurantProxy restaurantProxy;
-    private OrderProxy orderProxy;
 
 
     @Autowired
-    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy, OrderProxy orderProxy) {
+    public RestaurantServiceImpl(RestaurantRepo restaurantRepo, RestaurantProxy restaurantProxy) {
         this.restaurantRepo = restaurantRepo;
         this.restaurantProxy = restaurantProxy;
-        this.orderProxy = orderProxy;
     }
 
     @Override
@@ -84,11 +81,6 @@ public class RestaurantServiceImpl implements RestaurantService {
         return restaurant.getCuisineList();
     }
 
-    @Override
-    public Restaurant addRestaurantToFavorite(String emailId, Restaurant restaurant) {
-        ResponseEntity<?> responseEntity = restaurantProxy.addRestaurantToFavorite(emailId, restaurant);
-        return restaurant;
-    }
 
     @Override
     public List<Restaurant> restaurantSearchByLocation(String restaurantLocation) throws RestaurantNotFoundException {
@@ -100,8 +92,8 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public Cuisine addCuisineToOrder(int orderId, Cuisine cuisine) {
-        ResponseEntity<?> responseEntity = orderProxy.saveCuisineToOrder(orderId, cuisine);
+    public Cuisine addCuisineToCart(String emailId, Cuisine cuisine) {
+        ResponseEntity<?> responseEntity = restaurantProxy.addToCart(emailId, cuisine);
         return cuisine;
     }
 
@@ -139,22 +131,18 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     @Override
     public List<Cuisine> deleteCuisine(int restaurantId, int cuisineId) throws RestaurantNotFoundException, CuisineNotFoundException {
+        boolean found = false;
         if (restaurantRepo.findById(restaurantId).isEmpty()) {
             throw new RestaurantNotFoundException();
         }
         Restaurant restaurant = restaurantRepo.findById(restaurantId).get();
-        boolean found = false;
+        List<Cuisine> cuisineList = restaurant.getCuisineList();
+        found = cuisineList.removeIf(cuisine -> cuisine.getCuisineId() == cuisineId);
 
-        for (Cuisine cuisine : restaurant.getCuisineList()) {
-            if (cuisine.getCuisineId() == (cuisineId)) {
-                restaurant.getCuisineList().remove(cuisine);
-                restaurantRepo.save(restaurant);
-                found = true;
-            }
-        }
         if (!found) {
             throw new CuisineNotFoundException();
         }
+        restaurantRepo.save(restaurant);
         return restaurant.getCuisineList();
     }
 
